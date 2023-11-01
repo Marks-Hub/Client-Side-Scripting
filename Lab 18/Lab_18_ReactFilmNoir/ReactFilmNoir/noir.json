@@ -1,0 +1,124 @@
+{
+"films":[
+{
+"title":"Double Indemnity",
+"director":"Billy Wilder",
+"year":"1944",
+"still":"double-indemnity.jpg",
+"youtube":"ZKdcYnlkhx8",
+"imdb":"https://www.imdb.com/title/tt0036775/",
+"desc":"An insurance representative lets himself be talked by a seductive housewife into a murder/insurance fraud scheme that arouses the suspicion of an insurance investigator.",
+"stars":"Fred MacMurray, Barbara Stanwyck, Edward G. Robinson"
+},
+{
+"title":"Sunset Boulevard",
+"director":"Billy Wilder",
+"year":"1950",
+"still":"SunsetBlvd.jpg",
+"youtube":"TMUJpec6Bdc",
+"imdb":"https://www.imdb.com/title/tt0043014/",
+"desc":"A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.",
+"stars":"William Holden, Gloria Swanson, Erich von Stroheim"
+},
+{
+"title":"The Third Man",
+"director":"carol Reed",
+"year":"1949",
+"still":"ThirdMan.jpg",
+"youtube":"21h0G_gU9Tw",
+"imdb":"https://www.imdb.com/title/tt0041959/",
+"desc":"Pulp novelist Holly Martins travels to shadowy, postwar Vienna, only to find himself investigating the mysterious death of an old friend, Harry Lime.",
+"stars":"Orson Welles, Joseph Cotten, Alida Valli "
+},
+{
+"title":"In a Lonely Place",
+"director":"Nocholas Ray",
+"year":"1950",
+"still":"LonelyPlaceTrailer.jpg",
+"youtube":"Zz1UQ8q0yKo",
+"imdb":"https://www.imdb.com/title/tt0042593",
+"desc":"A potentially violent screenwriter is a murder suspect until his lovely neighbor clears him. However, she soon starts to have her doubts.",
+"stars":"Humphrey Bogart, Gloria Grahame, Frank Lovejoy"
+},
+{
+"title":"Touch of Evil",
+"director":"Orson Welles",
+"year":"1958",
+"still":"touchevil.jpg",
+"youtube":"1JFWHPBiW6E",
+"imdb":"https://www.imdb.com/title/tt0052311/",
+"desc":"A stark, perverse story of murder, kidnapping, and police corruption in a Mexican border town.",
+"stars":"Charlton Heston, Orson Welles, Janet Leigh"
+},
+{
+"title":"Out of the Past",
+"director":"Jacques Tourneur",
+"year":"1947",
+"still":"Out-of-the-Past.jpg",
+"youtube":"qiIB8Y8PBe8",
+"imdb":"https://www.imdb.com/title/tt0039689/",
+"desc":"A private eye escapes his past to run a gas station in a small town, but his past catches up with him. Now he must return to the big city world of danger, corruption, double crosses and duplicitous dames.",
+"stars":"Robert Mitchum, Jane Greer, Kirk Douglas"
+},
+{
+"title":"White Heat",
+"director":"Raoul Walsh",
+"year":"1949",
+"still":"white-heat.jpg",
+"youtube":"3bMtOABixrQ",
+"imdb":"https://www.imdb.com/title/tt0042041/",
+"desc":"A psychopathic criminal with a mother complex makes a daring break from prison and leads his old gang in a chemical plant payroll heist.",
+"stars":"James Cagney, Virginia Mayo, Edmond O'Brien"
+},
+{
+"title":"The Big Heat",
+"director":"Fritz Lang",
+"year":"1953",
+"still":"theBigHeat.jpg",
+"youtube":"MZb5BBV52DM",
+"imdb":"https://www.imdb.com/title/tt0045555/",
+"desc":"Tough cop Dave Bannion takes on a politically powerful crime syndicate.",
+"stars":"Glenn Ford, Gloria Grahame, Jocelyn Brando"
+},
+{
+"title":"Sweet Smell of Success",
+"director":"Alexander Mackendrick",
+"year":"1957",
+"still":"SweetSmell.jpg",
+"youtube":"U0FBVju7fVI",
+"imdb":"https://www.imdb.com/title/tt0051036/",
+"desc":"Powerful but unethical Broadway columnist J.J. Hunsecker coerces unscrupulous press agent Sidney Falco into breaking up his sister's romance with a jazz musician.",
+"stars":" Burt Lancaster, Tony Curtis, Susan Harrison"
+},
+{
+"title":"The Big Sleep",
+"director":"Howard Hawks",
+"year":"1946",
+"still":"BigSleep.jpg",
+"youtube":"LF_chuSy9G4",
+"imdb":"https://www.imdb.com/title/tt0038355/",
+"desc":"Private detective Philip Marlowe is hired by a wealthy family. Before the complex case is over, he's seen murder, blackmail, and what might be love.",
+"stars":"Humphrey Bogart, Lauren Bacall, John Ridgely"
+},
+{
+"title":"Gilda",
+"director":"Charles Vidor",
+"year":"1946",
+"still":"gilda.jpg",
+"youtube":"PUrCBGv4xqs",
+"imdb":"https://www.imdb.com/title/tt0038559/",
+"desc":"A small-time gambler hired to work in a Buenos Aires casino discovers his employer's new wife is his former lover.",
+"stars":"Rita Hayworth, Glenn Ford, George Macready"
+},
+{
+"title":"The Maltese Falcon",
+"director":"John Huston",
+"year":"1941",
+"still":"maltesefalcon.jpg",
+"youtube":"sGuNGXmQZSE",
+"imdb":"https://www.imdb.com/title/tt0033870/",
+"desc":"A private detective takes on a case that involves him with three eccentric criminals, a gorgeous liar, and their quest for a priceless statuette.",
+"stars":" Humphrey Bogart, Mary Astor, Gladys George"
+}
+]
+}

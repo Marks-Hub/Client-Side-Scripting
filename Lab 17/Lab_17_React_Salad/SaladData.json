@@ -1,0 +1,25 @@
+{
+"lettuce":[
+{"name":"Iceberg"},
+{"name":"Romain"},
+{"name":"Spring Mix"},
+{"name":"Spinach"}
+],
+"fixings":[
+{"name":"Chicken"}, 
+{"name":"Tuna"}, 
+{"name":"Tofu"}, 
+{"name":"Ham"}, 
+{"name":"Peppers"}, 
+{"name":"Broccoli"}, 
+{"name":"Carrots"}, 
+{"name":"Cucumbers"} 
+],
+"dressings":[
+{"name":"Balsamic Vinaigrette"}, 
+{"name":"Caesar"}, 
+{"name":"Italian"}, 
+{"name":"Ranch"}, 
+{"name":"French"} 
+]
+}

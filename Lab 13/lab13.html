@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>React Bill Calculator REVISITED</title>
+
+      <!-- NEWER CDNs for React and Babel -->
+      <!-- CDN's react, ReactDOM, and JSX/Babel -->
+      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      <!-- the CDN for JSX -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.2/babel.min.js"></script>
+
+      <style>
+         body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 0.5rem;
+            background-color: seagreen;
+            color: seashell;
+            font-size: xx-large;
+         }
+
+         label {
+            display: inline-block;
+            width: 8rem;
+            margin: 0.5rem;
+         }
+
+         input[type="number"] {
+            text-align: right;
+            width: 8rem;
+            font-size: 1.5rem;
+            text-align: right;
+            margin-right: 0.5rem;
+         }
+
+         input[type="button"] {
+            width: 18rem;
+            font-size: large;
+            padding: 0.5rem;
+         }
+      </style>
+   </head>
+
+   <body>
+      <h3>React Bill Calculator</h3>
+      <div id="divBillCalc"></div> <!-- container for React component -->
+
+      <script type="text/babel"> // NOT SIMPLE JAVASCRIPT
+
+         class MyBillCalc extends React.Component {
+
+            // we set the state in the constructor
+            constructor(props) {
+               super(props);
+               /*
+                  The super keyword is used to access and call functions on 
+                  an object's parent in this case React.Component -- the class 
+                  we are extending here we use the parent's constructor -- which 
+                  we will add to with our "state"
+               */
+               this.state = { result: "------", tipPercent: 1, bill: 1, tip: 0.01};
+            }
+
+            /* 
+               One of the advantages of the "fat arrow" style of function is 
+               that it does NOT claim any "this" -- therefore the "this" 
+               referenced below belongs to the class.  An alternate approach is 
+               to "bind"
+            */
+            setBill = (e) => {
+               //called when user changes bill
+               this.setState({ bill: e.target.value });
+               this.setState({ result: "------" }); // clear out display if input data changed
+            }
+
+            setTipPercent = (e) => {
+               //called when user changes Hours
+               this.setState({ tipPercent: e.target.value });
+               this.setState({ result: "------" });
+            }
+
+            /*
+               Note that setState is like fetch in that it is 
+               asynchronous! You cannot use setState and immediately 
+               follow that with other statements that use the new 
+               state.  If there are things on your page that use the 
+               new state they will be updated after the state has 
+               finished updating -- known as a promise.
+            */
+
+            calcBill = () => {
+               //called when user clicks button
+               let tip;
+               let finalBill;
+               tip = this.state.bill * ((this.state.tipPercent)/100);
+               //tip = (tip.toFixed(2));
+               finalBill = parseInt(this.state.bill) + tip;
+               finalBill = "$" + finalBill;
+               this.setState({ result: finalBill, tip: tip });
+            }
+
+            render() { //The only method you must define in a React.Component subclass is called render().
+               return (
+                  <div>
+                     <div>
+                        <label>Tip Percentage:</label> <br/>
+                        <input type="number" onChange={this.setTipPercent} value={this.state.tipPercent} />
+                     </div>
+                     <div>
+                        <label>Bill:</label> <br/>
+                        <input type="number" onChange={this.setBill} value={this.state.bill} />
+                     </div>
+                     <div>
+                        <input type="button" value="Calculate Bill"
+                           onClick={this.calcBill} />
+                     </div>
+                     <label>Calculated Tip:</label>
+                     <div id="tipp">{this.state.tip}</div> <br/>
+                     <div id="divResult">{this.state.result} </div>
+                  </div>
+               )//match return
+            } //match render
+         };//match createClass
+
+         // call the render methods
+         const divBill = ReactDOM.createRoot(document.getElementById('divBillCalc'));
+         divBill.render(<MyBillCalc />);
+
+      </script>
+   </body>
+
+</html>

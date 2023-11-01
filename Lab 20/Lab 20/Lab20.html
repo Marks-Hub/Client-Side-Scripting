@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 20 Reservations Mark Okin</title>
+    <style>
+        body {
+            background-color: lightpink;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="room_reservations">
+        <span v-for="anObj in rooms">
+            <input type="radio" :id="anObj.name" name="radRooms" :value="anObj" v-model="user_room" />
+            <label :for="anObj.name">{{anObj.name}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span v-for="anObj in Days">
+            <input type="radio" :id="anObj.Date" name="radDays" :value="anObj" v-model="user_Days" />
+            <label :for="anObj.Date">{{anObj.Date}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span v-for="anObj in Times">
+            <input type="radio" :id="anObj.time" name="radTime" :value="anObj" v-model="user_Times" />
+            <label :for="anObj.time">{{anObj.time}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span>Reservation: {{ user_room.name}}, {{ user_Days.Date}}, {{ user_Times.time}} </span>
+        <br /><br /><br />
+        <input type="button" value="Add Reservation" v-on:click="AddToReservation" />
+        <span>Reservation List:  </span> <ol><li v-for="anObj in reservations_list">{{anObj}}</li></ol>
+    </div>
+    <script src="Lab20.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    background-color: rgb(240, 200, 140);
+    color: rgb(34, 1, 58);
+ }
+ 
+ .wrapper {
+    text-align: left;
+    display: grid;
+    grid-gap: 5px;
+    width: 680px;
+    grid-template-columns: 180px 180px 300px;
+    background-color: rgb(34, 1, 58);
+    color: rgb(34, 1, 58);
+    border-radius: 5px;
+    /* justify-content: center; */
+    margin-Left: auto;
+    margin-right: auto;
+ }
+ 
+ .box {
+    background-color: darkorange;
+    color: rgb(34, 1, 58);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1em;
+    border: solid black 1px;
+ }

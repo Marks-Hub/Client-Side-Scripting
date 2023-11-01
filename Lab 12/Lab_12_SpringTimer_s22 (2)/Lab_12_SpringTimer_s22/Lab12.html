@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Okin's Oscillatory</title> <!--Mark Okin-->
+    <style>
+    body{
+        background-color: rgb(255, 255, 255);
+        color:rgb(10, 10, 82);
+    }
+    #Spring{
+        position:absolute;
+        top: 100px;
+        left: 50px;
+        width: 150px;
+        height: 300px;
+    }
+    #Weight{
+        position:absolute;
+        top: 380px;
+        left: 50px;
+        width: 150px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Mark Okin's Oscillatory</h1>
+    
+    <button id="start" >Start</button>
+    <button id="stop" disabled>Stop</button>
+    <button id="reset" disabled>Reset</button>
+    <br>
+    <img id="Spring" src="Spring.png" alt="spring image">
+    <img id="Weight" src="Weight.png" alt="Weight image">
+
+</body>
+<script> //Mark Okin
+let t = 0;
+document.getElementById("start").addEventListener("click", starts);
+document.getElementById("stop").addEventListener("click", stops);
+document.getElementById("reset").addEventListener("click", resets);
+
+function starts(){
+document.getElementById("stop").disabled = false;
+document.getElementById("start").disabled = true;
+
+timerID = setInterval(Oscillatory, 50);
+}
+
+function stops(){
+document.getElementById("stop").disabled = true;
+document.getElementById("start").disabled = false;
+document.getElementById("reset").disabled = false;
+clearInterval(timerID);
+}
+
+function resets(){
+document.getElementById("stop").disabled = true;
+document.getElementById("start").disabled = false;
+document.getElementById("reset").disabled = true;
+clearInterval(timerID);
+}
+
+function Oscillatory(){
+t++;
+
+let y = 300 + 100 * Math.sin(0.2 * t);
+document.getElementById("Spring").style.height = y+"px";
+document.getElementById("Weight").style.top = y+80+"px";
+
+}
+</script>
+</html>

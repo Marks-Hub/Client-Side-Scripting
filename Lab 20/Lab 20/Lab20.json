@@ -1,0 +1,53 @@
+{
+    "rooms": [
+        {
+            "name": "Holroyd 120"
+        },
+        {
+            "name": "Holroyd 153"
+        },
+        {
+            "name": "Holroyd 155"
+        }
+    ],
+    "Days": [
+        {
+            "Date": "Monday"
+        },
+        {
+            "Date": "Tuesday"
+        },
+        {
+            "Date": "Wednesday"
+        },
+        {
+            "Date": "Thursday"
+        },
+        {
+            "Date": "Friday"
+        }
+    ],
+    "Times": [
+        {
+            "time": "8:00 AM"
+        },
+        {
+            "time": "9:00 AM"
+        },
+        {
+            "time": "10:00 AM"
+        },
+        {
+            "time": "11:00 AM"
+        },
+        {
+            "time": "12:00 PM"
+        },
+        {
+            "time": "13:00 PM"
+        },
+        {
+            "time": "14:00 PM"
+        }
+    ]
+}

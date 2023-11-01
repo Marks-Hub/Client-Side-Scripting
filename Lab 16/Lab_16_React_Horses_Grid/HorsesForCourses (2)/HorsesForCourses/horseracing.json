@@ -1,0 +1,105 @@
+{
+"horses":
+[
+{
+"horseName":"Secretariat",
+"horseRank":"1",
+"horseRating":"9.35",
+"horseSilks":"secretariat",
+"horseSire":"Bold Ruler",
+"horseTrainer":"L. Laurin",
+"horseJockey":"E. Maple",
+"horseYouTubeCode":"EqliNZvnFoE"
+},
+{
+"horseName":"Man o' War",
+"horseRank":"2",
+"horseRating":"9.33",
+"horseSilks":"man_o_war",
+"horseSire":"Fair Play",
+"horseTrainer":"L. Feustel",
+"horseJockey":"C. Kummer",
+"horseYouTubeCode":"VfW6oZrvoSU"
+},
+{
+"horseName":"Spectacular Bid",
+"horseRank":"3",
+"horseRating":"9.30",
+"horseSilks":"spectacular_bid",
+"horseSire":"Bold Bidder",
+"horseTrainer":"G.Delp",
+"horseJockey":"W. Shoemaker",
+"horseYouTubeCode":"NcbHpy61bTk"
+},
+{
+"horseName":"Seattle Slew",
+"horseRank":"4",
+"horseRating":"9.30",
+"horseSilks":"seattle_slew",
+"horseSire":"Bold Reasoning",
+"horseTrainer":"D. Peterson",
+"horseJockey":"A. Cordero",
+"horseYouTubeCode":"iw-QYkEjVBM"
+},
+{
+"horseName":"Affirmed",
+"horseRank":"5",
+"horseRating":"9.30",
+"horseSilks":"affirmed",
+"horseSire":"Exclusive Native",
+"horseTrainer":"L.Barrera",
+"horseJockey":"L. Pincay",
+"horseYouTubeCode":"65V3xFLPNLA"
+},
+{
+"horseName":"Citation",
+"horseRank":"6",
+"horseRating":"9.30",
+"horseSilks":"citation",
+"horseSire":"Bill Lea",
+"horseTrainer":"B. Jones",
+"horseJockey":"S. Brooks",
+"horseYouTubeCode":"qxDSsqy02XY"
+},
+{
+"horseName":"Dr. Fager",
+"horseRank":"7",
+"horseRating":"9.29",
+"horseSilks":"dr_fager",
+"horseSire":"Bill Lea",
+"horseTrainer":"J. Nerud",
+"horseJockey":"B. Baeza",
+"horseYouTubeCode":"6wVBNbmcaAE"
+},
+{
+"horseName":"Kelso",
+"horseRank":"8",
+"horseRating":"9.29",
+"horseSilks":"kelso",
+"horseSire":"Your Host",
+"horseTrainer":"C. Hanford",
+"horseJockey":"I. Valenzuela",
+"horseYouTubeCode":"YSCmbMlauFU"
+},
+{
+"horseName":"Damascus",
+"horseRank":"9",
+"horseRating":"9.19",
+"horseSilks":"damascus",
+"horseSire":"Sword Dancer",
+"horseTrainer":"F. Whiteley",
+"horseJockey":"L. Adams",
+"horseYouTubeCode":"gWGOzCcR2wQ"
+},
+{
+"horseName":"Native Dancer",
+"horseRank":"10",
+"horseRating":"9.18",
+"horseSilks":"native_dancer",
+"horseSire":"Polynesian",
+"horseTrainer":"W. Winfrey",
+"horseJockey":"E. Guerin",
+"horseYouTubeCode":"GVjiT5yI-8c"
+}
+]
+}

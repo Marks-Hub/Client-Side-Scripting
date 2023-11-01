@@ -1,0 +1,23 @@
+body {
+   background-color: lightsalmon;
+   color: rgb(25, 25, 102);
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: 1rem;
+}
+
+span {
+   display: inline-block;
+   width: 27rem;
+}
+
+img {
+   padding-top: 0.25em;
+   padding-bottom: 0.25rem;
+   height: 250px;
+   width: 200px;
+}
+
+input[type="checkbox"]:checked+label {
+	background-color: rgb(25, 25, 102);
+	color: lightsalmon;
+}
