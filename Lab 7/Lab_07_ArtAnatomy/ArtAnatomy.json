@@ -1,0 +1,98 @@
+[
+  {
+    "book_title": "Bridgman's Life Drawing",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "0486227103",
+    "book_page_no": 192,
+    "book_cover": "yhst-137970348157658_2543_1253349287.jpg",
+    "book_price": 8.95
+  },
+  {
+    "book_title": "Constructive Anatomy",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "0486211045",
+    "book_page_no": 192,
+    "book_cover": "yhst-137970348157658_2544_813225045.jpg",
+    "book_price": 9.95
+  },
+  {
+    "book_title": "Drawing the Draped Figure",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "0486418022",
+    "book_page_no": 64,
+    "book_cover": "yhst-137970348157658_2541_1986709536.jpg",
+    "book_price": 6.95
+  },
+  {
+    "book_title": "Heads, Features and Faces",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "0486227081",
+    "book_page_no": 64,
+    "book_cover": "yhst-137970348157658_2541_952018393.jpg",
+    "book_price": 6.95
+  },
+  {
+    "book_title": "The Human Machine",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "0486227073",
+    "book_page_no": 160,
+    "book_cover": "yhst-137970348157658_2539_1128718357.jpg",
+    "book_price": 9.95
+  },
+  {
+    "book_title": "One Hundred Figure Drawings",
+    "book_author": "George B. Bridgman",
+    "book_isbn": "048647030X",
+    "book_page_no": 112,
+    "book_cover": "yhst-137970348157658_2542_140837989.jpg",
+    "book_price": 9.95
+  },
+  {
+    "book_title": "Anatomical Diagrams for Art Students",
+    "book_author": "James M. Dunlop",
+    "book_isbn": "0486457753",
+    "book_page_no": 80,
+    "book_cover": "yhst-137970348157658_2541_1934422376.jpg",
+    "book_price": 8.95
+  },
+  {
+    "book_title": "Anatomy for Artists",
+    "book_author": "Diana Stanley",
+    "book_isbn": "0486429814",
+    "book_page_no": 112,
+    "book_cover": "yhst-137970348157658_2541_1934472079.jpg",
+    "book_price": 7.95
+  },
+  {
+    "book_title": "Art Anatomy Simplified",
+    "book_author": "Charles Carlson",
+    "book_isbn": "048645262X",
+    "book_page_no": 48,
+    "book_cover": "yhst-137970348157658_2542_2075109998.jpg",
+    "book_price": 5.95
+  },
+  {
+    "book_title": "The Energetic Line in Figure Drawing",
+    "book_author": "Alon Bement",
+    "book_isbn": "0486470121",
+    "book_page_no": 144,
+    "book_cover": "yhst-137970348157658_2541_2087106305.jpg",
+    "book_price": 9.95
+  },
+  {
+    "book_title": "The Human Figure",
+    "book_author": "John H. Vanderpoel",
+    "book_isbn": "0486204324",
+    "book_page_no": 144,
+    "book_cover": "yhst-137970348157658_2544_3300461.jpg",
+    "book_price": 8.95
+  },
+  {
+    "book_title": "The Influence of Bones and Muscles on Form",
+    "book_author": "Walter T. Foster",
+    "book_isbn": "0486482855",
+    "book_page_no": 64,
+    "book_cover": "yhst-137970348157658_2541_2090954197.jpg",
+    "book_price": 9.95
+  }
+]

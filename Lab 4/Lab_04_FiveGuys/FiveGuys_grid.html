@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         .wrapper {
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: 200px 200px;
+            background-color: #fff;
+            color: #111;
+         }
+
+         .box {
+            background-color: #ccc;
+            color: #111;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+            border: solid black 1px;
+         }
+         #handleButton{
+            background-color: rgb(255, 255, 255);
+            color: #111;
+            border-radius: 7px;
+            padding: 10px;
+            font-size: 3em;
+            border: solid black 1px;
+            width: 100%;
+         }
+
+         button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2em;
+            font-weight: bold;
+            padding-left: 2em;
+            padding-right: 2em;
+         }
+
+         .divHead{
+            font-size: large;
+            font-weight: bold;
+         }
+      </style>
+      <title>Mark Okin's Five Guys </title> <!--Mark Okin-->>
+   </head>
+
+   <body>
+      <p>Yes, you can (must) edit the HTML below. </p>
+      <div class="wrapper">
+         <div class="box" style="grid-column: 1 / span 2;">Something</div>
+         <div class="box">
+            <span class="divHead">Burger</span>
+         </div>
+         <div class="box">
+            <span class="divHead">Cook Level</span>
+         </div>
+         <div class="box">   
+            <input id="hamburger" name="burger" type="radio" value="V1" /><label for="hamburger">Hamburger</label><br />
+            <input id="cheeseburger" name="burger" type="radio" value="V1" /><label for="cheeseburger">Cheeseburger</label><br />
+            <input id="baconHamburger" name="burger" type="radio" value="V1" /><label for="baconHamburger">Bacon Hamburger</label><br />
+            <input id="baconCheeseburger" name="burger" type="radio" value="V1" /><label for="baconCheeseburger">Bacon Cheeseburger</label><br />
+         </div>
+         <div class="box">
+            <input id="rare" name="cookLevel" type="radio" value="V1" /><label for="rare">Rare</label><br />
+            <input id="mediumRare" name="cookLevel" type="radio" value="V1" /><label for="mediumRare">Medium Rare</label><br />
+            <input id="mediumWell" name="cookLevel" type="radio" value="V1" /><label for="mediumWell">Medium Well</label><br />
+            <input id="well" name="cookLevel" type="radio" value="V1" /><label for="well">Well</label><br />
+         </div>
+         <div class="box" style="grid-column: 1 / span 2;">
+            <span class="divHead">Toppings</span>
+         </div>
+         <div class="box">
+            <input id="mayo" type="checkbox" /><label for="mayo">Mayo</label><br />
+            <input id="lettuce" type="checkbox" /><label for="lettuce">Lettuce</label><br />
+            <input id="pickles" type="checkbox" /><label for="pickles">Pickles</label><br />
+            <input id="tomatoes" type="checkbox" /><label for="tomatoes">Tomatoes</label><br />
+         </div>
+         <div class="box">
+            <input id="grilledOnions" type="checkbox" /><label for="grilledOnions">Grilled onions</label><br />
+            <input id="grilledMushrooms" type="checkbox" /><label for="grilledMushrooms">Grilled mushrooms</label><br />
+            <input id="ketchup" type="checkbox" /><label for="ketchup">Ketchup</label><br />
+            <input id="mustard" type="checkbox" /><label for="mustard">Mustard</label><br />
+         </div>
+         <div class="box" style="grid-column: 1 / span 2;">
+            for fries checkbox
+         </div>
+         <div class="box" style="grid-column: 1 / span 2;">
+            <input id="handleButton" type="button" value="Order" />
+         </div>
+         <div class="box" style="grid-column: 1 / span 2;">
+            for order
+         </div>
+      </div>
+   </body>
+
+</html>

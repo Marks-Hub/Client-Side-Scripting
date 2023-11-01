@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Okin's Room Reservation </title>
+    <!--Mark Okin-->
+    <style>
+        .wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 150px 150px 150px;
+            background-color: rgb(60, 194, 8);
+            color: #111;
+        }
+
+        .box {
+            background-color: rgb(36, 202, 224);
+            color: #111;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 1em;
+            border: solid black 1px;
+        }
+
+        .a {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .b {
+            grid-column: 2 / span 2;
+            grid-row: 1;
+        }
+
+        .c {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .d {
+            grid-column: 2 / span 2;
+            grid-row: 2;
+        }
+
+        .e {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .f {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .g {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        .h {
+            grid-column: 1 / span 3;
+            grid-row: 4;
+        }
+
+        .i {
+            grid-column: 1 / span 3;
+            grid-row: 5;
+        }
+
+        #handleButton {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2em;
+            font-weight: bold;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mark Okin's Room Reservation </h1>
+    <p>Yes, you can (must) edit the HTML below. </p>
+    <div class="wrapper">
+        <div class="box a"><label for="txtName"> Name: </label></div>
+        <div class="box b"><input type="text" id="txtName" /></div>
+        <div class="box c"> <label for="rooms">Room: </label></div>
+        <div class="box d"><select id="rooms"></select></div>
+        <div class="box e">Day & time</div>
+        <div class="box f">
+            Day <br />
+            <label><input id="Radio1" checked="checked" name="day" type="radio" value="Mon" />Mon</label><br />
+            <label><input id="Radio2" name="day" type="radio" value="Tues" />Tues</label><br />
+            <label><input id="Radio3" name="day" type="radio" value="Wed" />Wed</label><br />
+            <label><input id="Radio4" name="day" type="radio" value="Thurs" />Thurs</label><br />
+            <label><input id="Radio5" name="day" type="radio" value="Fri" />Fri</label><br />
+        </div>
+        <div class="box g">
+            Time<br />
+            <label><input id="Radio6" checked="checked" name="time" type="radio" value="6" />6</label><br />
+            <label><input id="Radio7" name="time" type="radio" value="7" />7</label><br />
+            <label><input id="Radio8" name="time" type="radio" value="8" />8</label><br />
+            <label><input id="Radio9" name="time" type="radio" value="9" />9</label><br />
+            <label><input id="Radio10" name="time" type="radio" value="10" />10</label><br />
+            <label><input id="Radio11" name="time" type="radio" value="11" />11</label><br />
+        </div>
+        <div class="box h">
+            <input id="handleButton" type="button" value="Make Reservation" />
+
+        </div>
+        <div class="box i">
+            <label for="reservations"> Reservations: </label> <br />
+            <textarea id="reservations" rows=10 cols=50 readonly></textarea>
+        </div>
+    </div>
+
+</body>
+<script>
+    let reservations = [];
+    //Mark Okin
+    document.getElementById("handleButton").addEventListener("click", btnhandleButton);
+    let room = ["H120", "H153", "H155"];
+
+    mySelect = document.getElementById("rooms");
+
+    for (i = 0; i < room.length; i++) {
+        let myOption = document.createElement("option");
+        myOption.text = room[i];
+        myOption.value = room[i];
+        mySelect.add(myOption, null);
+    }
+
+
+
+    function btnhandleButton() {
+        let name = document.getElementById("txtName").value;
+        if (name == null || name == "") {
+            alert("Please type your name");
+            return;
+        }
+        for (let i = 0; i < document.getElementsByName("time").length; i++) {
+            if (document.getElementsByName("time")[i].checked) {
+                userInput = document.getElementsByName("time")[i].value;
+
+            }//end if 
+
+        }
+        for (let i = 0; i < document.getElementsByName("day").length; i++) {
+            if (document.getElementsByName("day")[i].checked) {
+                userInput2 = document.getElementsByName("day")[i].value;
+            }//end if 
+
+        }
+        let booked = userInput2 + " " + userInput + " " + " " + document.getElementById("rooms").value;
+        booked = booked.toUpperCase();
+        booked = booked.trim();
+
+        if (reservations.indexOf(booked) == -1) {
+            //alert("not found")
+            reservations.push(booked);
+            document.getElementById("reservations").value += userInput + " " + userInput2 + " " + document.getElementById("rooms").value + "\n";
+            document.getElementById("txtName").value = "";
+            document.getElementById("txtName").focus();
+        }
+        else {
+            alert("Duplication Found")
+
+        }
+        //reservations.push(userInput2 + " " + userInput + " " + " " + document.getElementById("rooms").value);
+        //alert(reservations);
+
+
+
+
+    }
+</script>
+
+</html>

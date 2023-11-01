@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Gold Chain Price Estimator</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style type="text/css">
+         body {
+            background-color: darkolivegreen;
+            color: ivory;
+            font-family: Arial, Sans-Serif;
+            padding: 1em;
+         }
+
+         div,
+         input,
+         label,
+         button {
+            margin-top: 1em;
+            display: inline-block;
+         }
+
+         input {
+            width: 350px;
+         }
+
+         label {
+            width: 150px;
+         }
+
+         input[type="button"] {
+            background-color: ivory;
+            color: darkolivegreen;
+            font-weight: bold;
+            padding: 0.5em;
+         }
+
+         input[type="button"]:hover {
+            background-color: darkolivegreen;
+            color: ivory;
+         }
+
+         input[type="text"] {
+            background-color: #ffffff;
+            color: #000000;
+         }
+      </style>
+   </head>
+
+   <body>
+      <h1>Gold Chain Price Estimator</h1>
+      <p>Enter chain length in inches, chain width in mm and gold karat level.
+      </p>
+      <label for="txtChainLength">chain Length: </label><input id="txtChainLength" type="number" min="0" />
+      <br />
+      <label for="txtChainWidth">Chain Width: </label><input id="txtChainWidth" type="number" min="2" max="6"/>
+      <br />
+      <label for="txtGoldKarat">Karat Level: </label><input id="txtGoldKarat" type="number" min="10" max="24" step="1" value="" />
+      <br />
+      <button id="btnEstimateLvl">Estimate Gold Karat Level</button>
+      <button id="btnClearAll">Clear All Data</button>
+      <br /><br />
+      <textarea id="taSchedule" cols=30 rows=5 readonly></textarea>
+
+      <script>
+
+         document.getElementById("btnEstimateLvl").addEventListener("click", EstimateLvl)
+
+         /*
+            Make a Depreciation Schedule using straight-line depreciation
+         */
+         function EstimateLvl() {
+
+            let length = parseFloat(document.getElementById("txtChainLength").value);
+            if (isNaN(length)) {
+               alert("Problem with value entered for Length");
+               return;
+            }
+            let width = parseFloat(document.getElementById("txtChainWidth").value);
+            if (isNaN(width)) {
+               alert("Problem with value entered for Width");
+               return;
+            }
+            let karat = parseInt(document.getElementById("txtGoldKarat").value);
+            if (isNaN(karat)) {
+               alert("Problem with value entered for karat Level");
+               return;
+            }
+
+            if(karat > 24 || karat < 10){
+               alert("The karat level needs to be below 24 and above 10");
+               return;
+            }
+
+            if(width > 6 || width < 2){
+               alert("The width level needs to be below 6 and above 2");
+               return;
+            }
+
+            let estimate = 0.1348 * karat * length * (width*width);
+            //let value = initial;
+            document.getElementById("taSchedule").value = " " + estimate;
+           
+
+         }//end makeSchedule
+
+         //***************************************************************************
+
+         /*
+         document.getElementById("txtInitial").addEventListener("input", clearAnswer);
+         document.getElementById("txtSalvage").addEventListener("input", clearAnswer);
+         document.getElementById("txtLifeTime").addEventListener("input", clearAnswer)
+         */
+         let all_inputs = document.getElementsByTagName("input");
+         for (let i = 0; i < all_inputs.length; i++) {
+            all_inputs[i].addEventListener("input", clearAnswer)
+         }
+
+         // clears only the Schedule when the data changes
+         function clearAnswer() {
+            document.getElementById("taSchedule").value = "";
+         }
+
+         //****************************************************************************
+         document.getElementById("btnClearAll").addEventListener("click", clearAll)
+
+         // clears out both inputs and outputs 
+         function clearAll() {
+            document.getElementById("taSchedule").value = "";
+            document.getElementById("txtChainLength").value = "";
+            document.getElementById("txtChainWidth").value = "";
+            document.getElementById("txtGoldKarat").value = "";
+         }
+
+      </script>
+   </body>
+
+</html>

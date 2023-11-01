@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      .wrapper {
+         display: grid;
+         grid-gap: 5px;
+         grid-template-columns: 200px 200px;
+         background-color: #fff;
+         color: #111;
+      }
+
+      .box {
+         background-color: rgb(17, 231, 221);
+         color: rgb(223, 22, 206);
+         border-radius: 5px;
+         padding: 10px;
+         font-size: 1em;
+         border: solid black 1px;
+      }
+
+      #handleButton {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         font-size: 2em;
+         font-weight: bold;
+         padding-left: 2em;
+         padding-right: 2em;
+      }
+
+      .divHead {
+         font-size: large;
+         font-weight: bold;
+      }
+   </style>
+   <title>Mark Okin's Five Guys </title>
+   <!--Mark Okin-->>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="box" style="grid-column: 1 / span 2;">
+         <h1>Mark Okin's Five Guys </h1>
+      </div>
+      <div class="box">
+         <span class="divHead">Burger</span>
+      </div>
+      <div class="box">
+         <span class="divHead">Cook Level</span>
+      </div>
+      <div class="box">
+         <input id="hamburger" name="burger" type="radio" value="6.19" onclick="return handleRadioClick(this)"/><label for="hamburger">Hamburger</label><br />
+         <input id="cheeseburger" name="burger" type="radio" value="6.89" onclick="return handleRadioClick(this)"/><label
+            for="cheeseburger">Cheeseburger</label><br />
+         <input id="baconHamburger" name="burger" type="radio" value="7.19" onclick="return handleRadioClick(this)"/><label for="baconHamburger">Bacon Hamburger</label><br />
+         <input id="baconCheeseburger" name="burger" type="radio" value="7.89" onclick="return handleRadioClick(this)"/><label for="baconCheeseburger">Bacon Cheeseburger</label><br />
+      </div>
+      <div class="box">
+         <input id="rare" name="cookLevel" type="radio" value="Rare" onclick="return handleRadioClick(this)"/><label for="rare">Rare</label><br />
+         <input id="mediumRare" name="cookLevel" type="radio" value="Medium Rare" onclick="return handleRadioClick(this)"/><label for="mediumRare">Medium
+            Rare</label><br />
+         <input id="mediumWell" name="cookLevel" type="radio" value="Medium Well" onclick="return handleRadioClick(this)"/><label for="mediumWell">Medium
+            Well</label><br />
+         <input id="well" name="cookLevel" type="radio" value="Well" onclick="return handleRadioClick(this)"/><label for="well">Well</label><br />
+      </div>
+      <div class="box" style="grid-column: 1 / span 2;">
+         <span class="divHead">Toppings</span>
+      </div>
+      <div class="box">
+         <input id="mayo" name="Toppings1" type="checkbox" value="Mayo"
+            onclick="return handleCheckboxClick(this)" /><label for="mayo">Mayo</label><br />
+         <input id="lettuce" name="Toppings1" type="checkbox" value="Lettuce"
+            onclick="return handleCheckboxClick(this)" /><label for="lettuce">Lettuce</label><br />
+         <input id="pickles" name="Toppings1" type="checkbox" value="Pickles"
+            onclick="return handleCheckboxClick(this)" /><label for="pickles">Pickles</label><br />
+         <input id="tomatoes" name="Toppings1" type="checkbox" value="Tomatoes"
+            onclick="return handleCheckboxClick(this)" /><label for="tomatoes">Tomatoes</label><br />
+      </div>
+      <div class="box">
+         <input id="grilledOnions" name="Toppings2" type="checkbox" value="Grilled onions"
+            onclick="return handleCheckboxClick(this)" /><label for="grilledOnions">Grilled onions</label><br />
+         <input id="grilledMushrooms" name="Toppings2" type="checkbox" value="Grilled mushrooms"
+            onclick="return handleCheckboxClick(this)" /><label for="grilledMushrooms">Grilled mushrooms</label><br />
+         <input id="ketchup" name="Toppings2" type="checkbox" value="Ketchup"
+            onclick="return handleCheckboxClick(this)" /><label for="ketchup">Ketchup</label><br />
+         <input id="mustard" name="Toppings2" type="checkbox" value="Mustard"
+            onclick="return handleCheckboxClick(this)" /><label for="mustard">Mustard</label><br />
+      </div>
+      <div class="box" style="grid-column: 1 / span 2;">
+         <input id="fries" name="chips" type="checkbox" value="Fries"
+            onclick="return handleCheckboxClick(this)" /><label for="fries">Fries</label><br />
+      </div>
+      <div class="box" style="grid-column: 1 / span 2;">
+         <input id="handleButton" type="button" value="Put in your order" />
+      </div>
+      <div class="box" style="grid-column: 1 / span 2;">
+         <textarea id="order" rows=10 cols=50 readonly></textarea>
+         <label for="order"> for order </label> <br />
+
+
+      </div>
+   </div>
+</body>
+<script>
+   //Mark Okin
+   document.getElementById("handleButton").addEventListener("click", btnhandleButton);
+
+   function btnhandleButton() {
+      //declare an array variable to get values from checkbox input
+      let toppings = [];
+
+      //loop through checkboxes based on name, see if checked, add to (push onto) array
+      for (let i = 0; i < document.getElementsByName("Toppings1").length; i++) {
+         if (document.getElementsByName("Toppings1")[i].checked) {
+            //alert(document.getElementsByName("chkMovie[]")[i].value);
+            toppings.push(document.getElementsByName("Toppings1")[i].value);
+         }
+      }
+      let toppings2 = [];
+
+      //loop through checkboxes based on name, see if checked, add to (push onto) array
+      for (let i = 0; i < document.getElementsByName("Toppings2").length; i++) {
+         if (document.getElementsByName("Toppings2")[i].checked) {
+            //alert(document.getElementsByName("chkMovie[]")[i].value);
+            toppings2.push(document.getElementsByName("Toppings2")[i].value);
+         }
+      }
+
+      for (let i = 0; i < document.getElementsByName("burger").length; i++) {
+         if (document.getElementsByName("burger")[i].checked) {
+            price = parseFloat(document.getElementsByName("burger")[i].value);
+            burger = document.getElementsByName("burger")[i].nextElementSibling.innerHTML;
+         }//end if 
+      }//end for
+
+
+      for (let i = 0; i < document.getElementsByName("cookLevel").length; i++) {
+         if (document.getElementsByName("cookLevel")[i].checked) {
+            userInput2 = document.getElementsByName("cookLevel")[i].value;
+         }//end if 
+
+      }
+      let fried;
+      if (document.getElementById("fries").checked) {
+         fried = document.getElementById("fries").value;
+         price = price+3.79;
+         alert("You ordered fries.");
+         let order = "You ordered a: " + burger + " for $" + price + "\n Toppings: \n" + toppings2 + "\n" + toppings + "\n" + fried;
+         document.getElementById("order").value = order;
+      }
+      else{
+         let order = "You ordered a: " + burger + " for $" + price + "\n Toppings: \n" + toppings2 + "\n" + toppings + "\nNo Fries";
+         document.getElementById("order").value = order;
+      }
+
+   }
+   function handleCheckboxClick() {
+	//take away display because user changed selection
+	document.getElementById("order").value = "";
+	//re-enable button because user changed selection
+
+	console.log(this.value + " " + this.checked);
+   }
+
+   function handleRadioClick() {
+	//take away display because user changed selection
+	document.getElementById("order").value = "";
+	//re-enable button because user changed selection
+
+	console.log(this.value + " " + this.checked);
+   }
+</script>
+
+</html>

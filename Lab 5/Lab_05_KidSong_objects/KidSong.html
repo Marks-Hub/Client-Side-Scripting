@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				background-color: #fff;
+				font-size: 1.5em;
+			}
+
+			.wrapper {
+				display: grid;
+				grid-gap: 1px;
+				width: 992px;
+				grid-template-columns: 220px 440px 330px;
+				background-color: #000;
+				color: #fff;
+				border-radius: 2px;
+			}
+
+			.box {
+				background-color: rgb(196, 52, 52);
+				color: rgb(17, 200, 224);
+				border-radius: 5px;
+				padding: 2px;
+				font-size: 1em;
+				border: solid black 1px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- "https://www.youtube.com/embed/fXFg5QsTcLQ"  -->
+		<h1> </h1>
+		<div class="wrapper">
+			<div class="box">
+				<!-- select element options loaded dynamically -->
+				<select id="selecSong"></select>
+			</div>
+			<div class="box" style="grid-column: 2; grid-row: 1 / span 3;">
+				<iframe id="youtubelink" width="420" height="315" src="https://www.youtube.com/embed/fXFg5QsTcLQ">
+				</iframe>
+			</div>
+			<div class="box" style="grid-column: 3; grid-row: 1 / span 3;">
+				<iframe id="songDesc" width="315" height="315" src="http://www1.lasalle.edu/~blum/c230wks/Songs/muffin.txt">
+				</iframe>
+			</div>
+			<div class="box">
+				<img id="imgPlace" src="http://www1.lasalle.edu/~blum/c230wks/Songs/muffin.png" alt="" width="200" />
+			</div>
+			<div id="vidLength" class="box">Video length</div>
+		</div>
+
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<script>
+
+			//big long string to parse
+			let KidSongData = "The Muffin Man,2:07,muffin.png,fXFg5QsTcLQ,muffin.txt|The Ants Go Marching,3:52,ants.png,2S__fbCGwOM,ants.txt|Twinkle Twinkle Little Star,2:33,twinkle.png,yCjJyiqpAuU,twinkle.txt|Old MacDonald Had A Farm,3:29,mcdonald.png,5oYKonYBujg,mcdonald.txt|Hickory Dickory Dock,3:01,hickory.png,HGgsklW-mtg,hickory.txt|The Farmer In The Dell,1:48,farmer.png,E-krsNziXEw,farmer.txt|Jack & Jill,1:46,jack.png,EFj0K38sPmA,jack.txt|Hot Cross Buns,1:43,hot.png,re3gXNTtwig,hot.txt";
+
+	// has title, video length, image_file, youtube_code, lyric_file 
+
+
+		</script>
+		<script src="classSongUse.js"></script>
+		<script src="KidsSongClass.js"></script>
+	</body>
+
+</html>

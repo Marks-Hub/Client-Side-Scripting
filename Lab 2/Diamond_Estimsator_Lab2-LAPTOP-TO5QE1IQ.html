@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Diamond Estimator</title>
+
+   <style>
+      body {
+         background-color: darkslateblue;
+         color: aliceblue;
+         font-family: Arial, Sans-Serif;
+         padding: 1em;
+      }
+
+      div,
+      input {
+         margin-top: 1em;
+         display: inline-block;
+      }
+
+      label {
+         width: 150px;
+      }
+
+      input {
+         width: 350px;
+         background-color: aliceblue;
+         color: darkslateblue;
+         font-weight: bold;
+         padding: 0.5em;
+      }
+
+      input:hover {
+         background-color: darkslateblue;
+         color: aliceblue;
+      }
+
+      select {
+         background-color: aliceblue;
+         color: darkslateblue;
+      }
+
+      option:nth-child(even) {
+         background-color: #ccc;
+      }
+
+      option:nth-child(odd) {
+         background-color: #fff;
+      }
+   </style>
+</head>
+
+<body>
+   <h2>Diamond Estimator </h2>
+
+   <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+   <label for="txtCarat">Carat: </label><input id="txtCarat" type="number" min="0" />
+   <h2>Select -- Dynamic Load (and addEvent Listner)</h2>
+   <label for="colors">Size: </label>
+   <select id="colors">
+   </select>
+
+   <br /><br />
+
+   <h2>Select -- Dynamic Load (and addEvent Listner)</h2>
+   <label for="clarityy">Size: </label>
+   <select id="clarityy">
+   </select>
+   <br /><br />
+   <input id="Calculate" type="button" value="Calculate" />
+   <div id="divResult3">Size: ----</div>
+   <br /><br />
+
+   <script>
+      //****************************************************************************************************
+      //****************************************************************************************************
+      document.getElementById("Calculate").addEventListener("change", calculate);
+
+      //PARALLEL ARRAY OF SIZES AND SIZE NAMES
+      let color = ["Colorless(E)", "Nearly colorless(H)", "Faint Color(L)", "Very Light Color(R)"];
+      let clarity = ["Very, very slightly included", "Very slightly included", "Slightly included", "Included"];
+
+      document.getElementById("Calculate").disabled = false;
+
+      //ADDING OPTIONS DYNAMICALLY
+      mySelect = document.getElementById("colors");
+      mySelect2 = document.getElementById("clarityy");
+      for (i = 1; i < color.length; i++) {
+         let myOption = document.createElement("option");
+         myOption.text = color[i];
+         myOption.value = i;
+         mySelect.add(myOption, null);
+      }
+
+      for (i = 1; i < clarity.length; i++) {
+         let myOptions = document.createElement("option");
+         myOptions.text = clarity[i];
+         myOptions.value = i;
+         mySelect2.add(myOptions, null);
+      }
+
+      //****************************************************************************************************
+      //button click
+      function calculate() {
+         //declare variable and get value from drop-down select -- It is now an index
+         let carat = parseFloat(document.getElementById("txtCarat").value);
+         if (isNaN(length)) {
+            alert("Problem with value entered for Carat");
+            return;
+         }
+         let userIndex = document.getElementById("colors").value;
+         let userIndex1 = document.getElementById("clarityy").value;
+
+         userInput = userIndex;
+         userInput1 = userIndex1;
+         
+         let price = 137 + 4020*carat - 244* userInput - 68*(userInput1*userInput1) - 50*userInput1
+         //popup message
+         alert("You chose size: " + price + ".");
+         //console log
+         console.log("Price =" + userInput + ".");
+         //message on page
+         //concatenation
+         document.getElementById("divResult3").innerHTML = "Size: " + values[userIndex] +
+            " (" + userInput + ")";
+         //disable button
+         document.getElementById("calculate").disabled = true;
+      }//***************************************************************************************************
+
+      // select change -- clear out old result and re-enable button
+      function handleSelect2() {
+         //message on page
+         document.getElementById("divResult3").innerHTML = "Size: ----";
+         //disabled button
+         document.getElementById("calculate").disabled = false;
+      }//***************************************************************************************************
+
+   </script>
+</body>
+
+</html>

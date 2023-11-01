@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mark Okin's Wooden Frames </title> <!--Mark Okin-->
+        <meta charset="utf-8" />
+        <style>
+            span {
+                font-style: italic;
+            }
+
+            .wrapper {
+                display: grid;
+                grid-gap: 1px;
+                grid-template-columns: 100px 200px 400px;
+                width: 702px;
+                background-color: #000;
+                color: #111;
+                height: 450px;
+            }
+
+            .box {
+                background-color: #11dd6d;
+                color: #111;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: 1em;
+                border: solid black 1px;
+            }
+
+            input[type="button"]{
+                font-size: large;
+                display:inline-block;
+                width: 275px;
+                margin-top: 0.5rem;
+            }
+            #calculatePrice{
+                font-size: large;
+                display:inline-block;
+                width: 275px;
+                margin-top: 0.5rem; 
+            }
+            #AddToCart{
+                font-size: large;
+                display:inline-block;
+                width: 275px;
+                margin-top: 0.5rem; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Mark Okin's Wooden Frames </h1>
+        <div class="wrapper">
+            <div class="box" style="grid-column: 1 /span 2">
+                <select id="selecFrame"></select>
+            </div>
+            <div class="box" style="grid-column: 3; grid-row: 1 / span 5;">
+                <img id="imgPlace" src="N116.jpg" height="350px"/>
+            </div>
+            <div class="box">
+                <label>Width:</label>
+            </div>
+            <div class="box">
+                <input id="width" type="number"  min="8" max="96" step="0.25"/>
+            </div>
+            <div class="box">
+                <label>Height:</label>
+            </div>
+            <div class="box">
+                <input id="height" type="number" type="number"  min="8" max="96" step="0.25"/>
+            </div>
+            <div class="box" style="grid-column: 1 /span 2; grid-row: 4;">
+                <button id="calculatePrice">Calculate cost of current frame</button>
+            </div>
+            <div class="box" style="grid-column: 1 / span 2;">Calculation <input id="Calculation" type="text" /></div>
+            
+            <div class="box" style="grid-column: 1 / span 2;">
+                <button id="AddToCart">Add current frame to Cart</button>
+            </div>
+            <div class="box">
+                TOTAL: $<input id="total" type="number" />
+            </div>
+            <div class="box" style="grid-column: 1 /span 3;">
+                <textarea id="solution" rows=6 cols=80> </textarea>
+            </div>
+        </div>
+        <script>//Mark Okin
+            let frameData = "Silver with Gold Wood Picture Frame,N116,1.10|Dark Brown Wood Picture Frame,AT3335,0.90|Dark Brown Wood Picture Frame,AT3332,0.90|Espresso Wood Picture Frame,97341,2.50|Beaded Black Wood Picture Frame,16344,1.20|Black with Gold Leaf Wood Picture Frame,44541,2.50";
+
+        </script>
+        		<script src="FrameClass.js"></script>
+                <script src="FrameClassUse.js"></script>
+
+    </body>
+
+</html>

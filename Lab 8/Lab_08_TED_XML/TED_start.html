@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Okin's TED Talks </title>
+</head>
+
+<body>
+    <style>
+        span {
+            font-style: italic;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-gap: 1px;
+            grid-template-columns: 100px 200px 450px;
+            width: 752px;
+            background-color: rgb(7, 209, 192);
+            color: rgb(43, 214, 20);
+            /* height: 250px; */
+        }
+
+        .box {
+            background-color: rgb(228, 30, 201);
+            color: rgb(195, 236, 11);
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 1em;
+            border: solid black 1px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!--Mark Okin-->
+        <h1>
+            Mark Okin's TED Talks
+        </h1>
+        <div class="wrapper">
+            <div class="box" style="grid-column: 1 /span 2; grid-row: 1;">
+                <select id="selTitle"></select>
+            </div>
+            <div class="box" style="grid-column: 3; grid-row: 1 / span 6;">
+                <iframe id="YTVid" width="420" height="315" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+                </iframe>
+            </div>
+            <div class="box">Author:</div>
+            <div class="box">
+                <span id="spnAuthor">XXX</span>
+            </div>
+            <div class="box">Runtime</div>
+            <div class="box">
+                <span id="spnRuntime">###</span>
+            </div>
+            <div class="box">Number of views:</div>
+            <div class="box">
+                <span id="spnViews">###</span>
+            </div>
+            <div class="box" style="grid-column: 1 / span 2; grid-row: 5;">
+                <span id="spnDesc">description</span>
+            </div>
+            <div class="box" style="grid-column: 1 / span 2; grid-row: 6;">
+                Min
+                <select id="selMin">
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                </select>
+                Max
+                <select id="selMax">
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                    <option value="24">24</option>
+                </select>
+                <input type="button" id="search" value="Search">
+            </div>
+            <div class="box" style="grid-row: 7; grid-column: 1 / span 3;">
+                <textarea rows=5 cols=80 id="taCart"></textarea>
+            </div>
+        </div>
+        <script src="ted_class.js"></script>
+        <script src="tedClassUse.js"></script>
+    </body>
+
+
+</html>

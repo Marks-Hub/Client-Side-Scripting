@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Okin's Art Anatomy Books</title> <!--Mark Okin-->
+</head>
+
+<body>
+    <style>
+        span {
+            font-style: italic;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-gap: 1px;
+            grid-template-columns: 100px 200px 200px;
+            width: 502px;
+            background-color: #000;
+            color: #111;
+            height: 250px;
+        }
+
+        .box {
+            background-color: #12c046;
+            color: #bd1a1a;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 1em;
+            border: solid black 1px;
+        }
+
+        .a {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .b {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .c {
+            grid-column: 3;
+            grid-row: 1 / span 5;
+        }
+
+        .d {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .e {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .f {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .g {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .h {
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .i {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .j {
+            grid-column: 1;
+            grid-row: 5;
+        }
+
+        .k {
+            grid-column: 2;
+            grid-row: 5;
+        }
+
+        .l {
+            grid-column: 1;
+            grid-row: 6;
+        }
+
+        .m {
+            grid-column: 2;
+            grid-row: 6;
+        }
+
+        .n {
+            grid-column: 3;
+            grid-row: 6;
+        }
+
+        .o {
+            grid-column: 1 / span 3;
+            grid-row: 7;
+        }
+
+        .p {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        #imgBook {
+            width: 180px;
+            height: 200px;
+        }
+
+        #AddToCart {
+            font-size: small;
+
+            width: 180px;
+            height: 20px;
+
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>
+            Mark Okin's Art Anatomy Books
+        </h1>
+        <div class="wrapper">
+            <div class="box a">Title:</div>
+            <div class="box b">
+                <select id="selTitle"></select>
+            </div>
+            <div class="box" syle="grid-column: 3; grid-row: 1 / span 5;">
+                <img id="imgBook" alt="image of book" src="" />
+            </div>
+            <div class="box d">Author:</div>
+            <div class="box e">
+                <span id="spnAuthor"></span>
+            </div>
+            <div class="box f">ISBN</div>
+            <div class="box g">
+                <span id="spnISBN"></span>
+            </div>
+            <div class="box h">Number of pages:</div>
+            <div class="box i">
+                <span id="spnPages"></span>
+            </div>
+            <div class="box j">Price:</div>
+            <div class="box k">
+                <span id="spnPrice"></span>
+            </div>
+            <div class="box l">Button here</div>
+            <div class="box m">Total</div>
+            <div class="box n">
+                <span id="spnTotal">$0.00</span>
+            </div>
+            <div class="box o">
+                <textarea rows=5 cols=60 id="taCart" readonly></textarea>
+            </div>
+            <div class="box p">
+                <button id="Calculate">Calculate Total</button>
+            </div>
+        </div>
+
+    </body>
+    <script language="javascript" type="text/javascript">//Mark Okin 
+
+        document.getElementById("selTitle").addEventListener("change", selectTitle)
+
+        // this time the JSON is an array
+        let myJSON = [];
+
+        // start fetching ****************************************************************************************
+        fetch('ArtAnatomy.json')
+            .then(function (response) {
+                // "promise" that returns JSON from file read
+                return response.json();
+            })
+            .then(function (data) {
+                /*
+                    fetching the data from the file is ASYNCHRONOUS so make sure you do most of the steps that involve 
+                    the data (parsing, loading options in drop-down select, and triggering select change event within 
+                    the promises
+                */
+
+                myJSON = data;  //set global variable myJSON equal to data argument from fetch
+                /*
+                    the JSON file has the structure that there is an array 
+                    of individual dog objects with properties such as dogName, dogHeight, dogDesc
+                */
+
+                //load up dogs into select
+                let mySelect = document.getElementById("selTitle");
+                // this time myJSON is an array
+                myJSON.map(function (obj, i) {
+                    let myOption = document.createElement("option");
+                    myOption.text = obj.book_title;  //dogName is a property found in the JSON file
+                    myOption.value = i;
+                    mySelect.appendChild(myOption);
+                });
+
+                // trigger a change event for the drop-down select
+                mySelect.value = Math.floor(Math.random() * myJSON.length);
+                let event = new Event('change');
+                mySelect.dispatchEvent(event);
+            })
+            .catch(function (error) {
+                console.log(error);
+            }) // end of fetching
+
+
+        function selectTitle() {
+            let myIndex = document.getElementById("selTitle").value;
+            let userTitle = myJSON[myIndex];  // this changed now myJSON is array; previously myJSON.dogs was the array
+            document.getElementById("spnAuthor").innerHTML = userTitle.book_author;
+            document.getElementById("spnISBN").innerHTML = userTitle.book_isbn;
+            document.getElementById("spnPages").innerHTML = userTitle.book_page_no;
+            document.getElementById("spnPrice").innerHTML = userTitle.book_price;
+            document.getElementById("imgBook").src = userTitle.book_cover;
+        }
+
+        let total = 0;
+        let price = 0;
+        document.getElementById("Calculate").addEventListener("click", Calculate)
+        function Calculate() {
+            let myIndex = document.getElementById("selTitle").value;
+            let userTitle = myJSON[myIndex];
+            price = userTitle.book_price;
+            total = price + total;
+            document.getElementById("spnTotal").innerHTML = "$"+total;
+            document.getElementById("taCart").value = userTitle.book_title + " by " + userTitle.book_author + ", Price: " + userTitle.book_price;
+        }
+    </script>
+
+</html>
