@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Mark Okin's WOmen Aritst</title>
+	<!--Mark Okin-->
+	<meta charset="utf-8">
+	<style>
+		body {
+			background-color: #fff;
+			font-size: 1.25em;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-gap: 1px;
+			width: 892px;
+			grid-template-columns: 220px 240px 430px;
+			background-color: rgb(241, 45, 241);
+			color: rgb(0, 204, 255);
+			border-radius: 2px;
+		}
+
+		.box {
+			background-color: rgb(51, 248, 11);
+			color: rgb(255, 251, 0);
+			border-radius: 5px;
+			padding: 2px;
+			font-size: 1em;
+			border: solid black 1px;
+		}
+
+		/* unvisited link */
+		a:link {
+			color: rgb(79, 68, 224);
+		}
+
+		/* visited link */
+		a:visited {
+			color: rgb(183, 226, 104);
+		}
+		#imgWham{
+			width: 230px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- "https://www.youtube.com/embed/fXFg5QsTcLQ"  -->
+	<h1>Mark Okin's Women Aritst</h1>
+	<div class="wrapper">
+		<div class="box">
+			<!-- select element options loaded dynamically -->
+			<select id="selWham"></select>
+		</div>
+		<div class="box" style="grid-column: 2; grid-row: 1 / span 5;">
+			<img id="imgWham" alt="" src="" />
+		</div>
+		<div class="box" style="grid-column: 3; grid-row: 1 / span 5;">
+			<iframe id="youtubb" width="420" height="315" src="https://www.youtube.com/embed/uPlJ9CJPwpc">
+			</iframe>
+		</div>
+		<div class="box">
+			Birth - Death <span id="Age"></span>
+		</div>
+		<div class="box">
+			Country <span id="country"></span>
+		</div>
+		<div class="box">
+			Movement(s) <span id="movement"></span>
+		</div>
+		<div class="box">
+			<a id="wikiLink" target="_blank" href="https://www.wikiart.org/en/mary-cassatt">Go to Wiki-Art Page</a>
+		</div>
+		<div class="box" style="grid-row: 6; grid-column: 1 / span 3;">
+			Who was alive in the year
+			<input id="searchYear" type="number" min="1755" max="2023" step="1" value="1900" onchange="handleInput()" style="text-align: right;">?
+			<input id="search" type="button" value="Find Out">
+		</div>
+		<div class="box" style="grid-row: 7; grid-column: 1 / span 3;">
+			<textarea id="result" rows="6" cols="80" readonly></textarea>
+		</div>
+	</div>
+</body>
+<script src="whamClass.js"></script>
+<script>
+	//Nark Okin
+	let myWham = [];
+
+	document.getElementById("selWham").addEventListener("change", chooseWham);
+	document.getElementById("search").addEventListener("click", findOut);
+	document.getElementById("searchYear").addEventListener("Change", handleInput);
+
+	/*
+		fetching data from local file 
+		for security reasons, Chrome won't run this as just local files but will run it if posted to a server
+		Internet Explorer/Edge will run it "locally"
+	*/
+	fetch('whm_one_line.txt')
+		.then(function (response) {
+			// "promise" that returns text from file read
+			return response.text();
+		})
+		.then(function (data) {
+			/*
+				fetching the data from the file is ASYNCHRONOUS so make sure 
+				you do most of the steps that involve the data (parsing, 
+				loading options in drop-down select, and triggering select 
+				change event within the promises
+			*/
+
+			//parse/split the data first on the # delimiter
+			let WhamDataLines = data.split("#");
+			//loop over results of above splitting
+			for (let i = 0; i < WhamDataLines.length; i++) {
+
+				//second parsing on | delimiter
+				let subdata = WhamDataLines[i].split("|");
+
+				//instantiate an object (an element of an array of objects)
+				myWham[i] = new wham(subdata[0], subdata[1], subdata[2], subdata[3], subdata[4], subdata[5], subdata[6], subdata[7]);
+				//alert(myWham[i].Title);
+			}
+
+			//load up movies into select
+			let mySelect = document.getElementById("selWham");
+
+			myWham.forEach((el, i) => {
+				let myOption = document.createElement("option");
+				myOption.text = el.Name;
+				myOption.value = i;
+				mySelect.add(myOption, null);
+
+			});
+
+			// trigger a change event for the drop-down select
+			let event = new Event('change');
+			mySelect.dispatchEvent(event);
+		})
+		.catch(function (error) {
+			console.log(error);
+		})
+
+	function chooseWham() {
+		let myIndex = document.getElementById("selWham").value;
+		document.getElementById("imgWham").src = myWham[myIndex].Picture;
+		document.getElementById("Age").innerHTML = myWham[myIndex].BYear + " - " +myWham[myIndex].DYear;
+		document.getElementById("country").innerHTML = myWham[myIndex].Country;
+		document.getElementById("movement").innerHTML = myWham[myIndex].Movement;
+		document.getElementById("youtubb").src = "https://www.youtube.com/embed/" + myWham[myIndex].Code;
+		document.getElementById("wikiLink").href = myWham[myIndex].WikiArtLink;
+	}
+
+	function findOut(){
+		let SearchYear = parseInt(document.getElementById("searchYear").value);
+		
+		for (i = 0; i < myWham.length; i++) {
+
+			if (myWham[i].BYear <= SearchYear && SearchYear <= myWham[i].DYear) {
+			namee= myWham[i].Name;
+			movment = myWham[i].Movement;
+			document.getElementById("result").value +=  namee + " " + movment + "\n \n";
+		}
+        
+    }
+	}
+	function handleInput(){
+    document.getElementById("result").value = " ";
+}
+</script>
+
+</html>

@@ -1,0 +1,298 @@
+{
+    "Food": [
+        {
+            "name": "Raw Chicken",
+            "image": "chicken1.png",
+            "price": 8.44,
+            "category": "chicken"
+        },
+        {
+            "name": "Perdue Drumsticks",
+            "image": "chicken2.png",
+            "price": 5.12,
+            "category": "chicken"
+        },
+        {
+            "name": "Seasoned Chicken",
+            "image": "chicken3.png",
+            "price": 3.14,
+            "category": "chicken"
+        },
+        {
+            "name": "Tasty Chicken",
+            "image": "chicken4.png",
+            "price": 3.19,
+            "category": "chicken"
+        },
+        {
+            "name": "Chicken Chicken",
+            "image": "chicken5.png",
+            "price": 5.34,
+            "category": "chicken"
+        },
+        {
+            "name": "Yummy Chicken",
+            "image": "chicken6.png",
+            "price": 2.14,
+            "category": "chicken"
+        },
+        {
+            "name": "Chicken Food",
+            "image": "chicken7.png",
+            "price": 9.40,
+            "category": "chicken"
+        },
+        {
+            "name": "Apple Pie",
+            "image": "baked_good1.png",
+            "price": 3.56,
+            "category": "baked"
+        },
+        {
+            "name": "Baked Apple Pie",
+            "image": "baked_good2.png",
+            "price": 1.23,
+            "category": "baked"
+        },
+        {
+            "name": "Cake Maybe",
+            "image": "baked_good3.png",
+            "price": 9.56,
+            "category": "baked"
+        },
+        {
+            "name": "Maybe Cake",
+            "image": "baked_good4.png",
+            "price": 10.23,
+            "category": "baked"
+        },
+        {
+            "name": "Baked Goods",
+            "image": "baked_good5.png",
+            "price": 5.67,
+            "category": "baked"
+        },
+        {
+            "name": "Something Baked",
+            "image": "baked_good6.png",
+            "price": 4.91,
+            "category": "baked"
+        },
+        {
+            "name": "Baking",
+            "image": "baked_good7.png",
+            "price": 0.99,
+            "category": "baked"
+        },
+        {
+            "name": "Meaty Meat",
+            "image": "beef1.png",
+            "price": 1.99,
+            "category": "beef"
+        },
+        {
+            "name": "Steak Meat",
+            "image": "beef2.png",
+            "price": 12.00,
+            "category": "beef"
+        },
+        {
+            "name": "Good Looking Steak?",
+            "image": "beef3.png",
+            "price": 8.75,
+            "category": "beef"
+        },
+        {
+            "name": "More Beef",
+            "image": "beef4.png",
+            "price": 3.18,
+            "category": "beef"
+        },
+        {
+            "name": "Ground Beef?",
+            "image": "beef5.png",
+            "price": 4.15,
+            "category": "beef"
+        },
+        {
+            "name": "More Meat",
+            "image": "beef6.png",
+            "price": 6.17,
+            "category": "beef"
+        },
+        {
+            "name": "Yes... It's Meat",
+            "image": "beef7.png",
+            "price": 8.19,
+            "category": "beef"
+        },
+        {
+            "name": "Bread",
+            "image": "bread1.png",
+            "price": 2.56,
+            "category": "bread"
+        },
+        {
+            "name": "Different Brand of Bread",
+            "image": "bread2.png",
+            "price": 3.89,
+            "category": "bread"
+        },
+        {
+            "name": "So Much Bread",
+            "image": "bread3.png",
+            "price": 1.34,
+            "category": "bread"
+        },
+        {
+            "name": "Ultimate Bread",
+            "image": "bread4.png",
+            "price": 2.09,
+            "category": "bread"
+        },
+        {
+            "name": "Breadiest Bread",
+            "image": "bread5.png",
+            "price": 3.98,
+            "category": "bread"
+        },
+        {
+            "name": "Bread Bread",
+            "image": "bread6.png",
+            "price": 4.87,
+            "category": "bread"
+        },
+        {
+            "name": "No More Bread",
+            "image": "bread7.png",
+            "price": 5.76,
+            "category": "bread"
+        },
+        {
+            "name": "Fishy Fish",
+            "image": "fish1.png",
+            "price": 1.09,
+            "category": "fish"
+        },
+        {
+            "name": "Fisheerman Fish",
+            "image": "fish2.png",
+            "price": 11.12,
+            "category": "fish"
+        },
+        {
+            "name": "Ultimate Fish",
+            "image": "fish3.png",
+            "price": 13.99,
+            "category": "fish"
+        },
+        {
+            "name": "Fish Fish",
+            "image": "fish4.png",
+            "price": 12.90,
+            "category": "fish"
+        },
+        {
+            "name": "Tuna Fish?",
+            "image": "fish5.png",
+            "price": 10.09,
+            "category": "fish"
+        },
+        {
+            "name": "Maybe Canned Fish",
+            "image": "fish6.png",
+            "price": 12.98,
+            "category": "fish"
+        },
+        {
+            "name": "Some Kind of Fish",
+            "image": "fish7.png",
+            "price": 8.45,
+            "category": "fish"
+        },
+        {
+            "name": "Ftuitless Fruit",
+            "image": "fruits1.png",
+            "price": 6.68,
+            "category": "fruits"
+        },
+        {
+            "name": "Avacado",
+            "image": "fruits2.png",
+            "price": 3.09,
+            "category": "fruits"
+        },
+        {
+            "name": "Strwaberry Maybe",
+            "image": "fruits3.png",
+            "price": 14.55,
+            "category": "fruits"
+        },
+        {
+            "name": "Banana?",
+            "image": "fruits4.png",
+            "price": 13.34,
+            "category": "fruits"
+        },
+        {
+            "name": "Grapes?",
+            "image": "fruits5.png",
+            "price": 12.34,
+            "category": "fruits"
+        },
+        {
+            "name": "More Fuit",
+            "image": "fruits6.png",
+            "price": 11.76,
+            "category": "fruits"
+        },
+        {
+            "name": "Fruity Fruit",
+            "image": "fruits7.png",
+            "price": 11.56,
+            "category": "fruits"
+        },
+        {
+            "name": "6 Pack of water",
+            "image": "water1.png",
+            "price": 10.12,
+            "category": "water"
+        },
+        {
+            "name": "12 Pack of water",
+            "image": "water2.png",
+            "price": 11.11,
+            "category": "water"
+        },
+        {
+            "name": "18 Pack of water",
+            "image": "water3.png",
+            "price": 9.99,
+            "category": "water"
+        },
+        {
+            "name": "Bottled water",
+            "image": "water4.png",
+            "price": 10.00,
+            "category": "water"
+        },
+        {
+            "name": "Gallon of Water",
+            "image": "water5.png",
+            "price": 3.00,
+            "category": "water"
+        },
+        {
+            "name": "Spring Water",
+            "image": "water6.png",
+            "price": 8.45,
+            "category": "water"
+        },
+        {
+            "name": "Deer Water",
+            "image": "water7.png",
+            "price": 8.44,
+            "category": "water"
+        }
+    ]
+}

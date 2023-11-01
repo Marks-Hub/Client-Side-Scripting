@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="React, Client-Side Scripting, Mark Okin, Grocery Store" />
+    <meta name="description" content="React Part of Project" />
+
+    <title>Grocery Store</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- the CDN for JSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.2/babel.min.js"></script>
+    <link rel="stylesheet" href="project.css">
+    <!--Got some error about not allowing access contol so it owuldn't show the control awesome. This was what fixed it-->
+    <Access-Control-Allow-Origin: 'http://127.0.0.1:5500' >
+    <script src="https://kit.fontawesome.com/b6ea633681.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <i class="fa-solid fa-utensils fa-beat"></i>
+    <svg width="1100" height="150" style="margin-right: auto; margin-left: auto;background-color: #01d32f;">
+        <text x="125" y="120" style="font-size: 75pt;fill:rgb(56, 9, 223);font-weight:bold;font-family:verdana;">FOOD
+            MARKET</text>
+        <!--Lines around logo On Left Down to up-->
+        <line x1="110" y1="110" x2="30" y2="140" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+        <line x1="110" y1="80" x2="30" y2="80" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+        <line x1="110" y1="50" x2="30" y2="20" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+        <!--Lines around logo On Right Down to up-->
+        <line x1="955" y1="110" x2="1030" y2="140" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+        <line x1="955" y1="80" x2="1030" y2="80" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+        <line x1="955" y1="50" x2="1030" y2="20" style="stroke:rgb(238, 255, 0);stroke-width:6" />
+    </svg>
+    <i class="fa-solid fa-utensils fa-beat"></i>
+    <div class="wrapper" id="divFoodMarket"></div>
+    <script type="text/babel" src="projectReact.js"></script>
+
+</body>
+
+</html>

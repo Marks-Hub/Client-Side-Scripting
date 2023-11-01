@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Mark Okin Meeting Availability </title>
+<!--Mark Okin-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .wrapper {
+            display: grid;
+            grid-gap: 1px;
+            grid-template-columns: 50px 150px 50px 100px 100px 100px;
+            width: 555px;
+            background-color: rgb(29, 189, 69);
+            color: rgb(207, 109, 109);
+        }
+
+        .box {
+            background-color: rgb(30, 19, 196);
+            color: rgb(68, 212, 49);
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 1em;
+            border: solid black 1px;
+        }
+
+        input[type="button"] {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mark Okin Meeting Availability </h1>
+    <div class="wrapper">
+        <div class="box" id="name">Name: </div>
+        <div class="box" style="grid-column: 2 /span 2;">
+            <input id="name" type="text"/>
+        </div>
+        <div class="box"id="email">Email:</div>
+        <div class="box" style="grid-row: 1; grid-column: 5 /span 2;">
+            <input type="text" id="email">
+        </div>
+        <div class="box">Day</div>
+        <div class="box">
+            <select id="days"onclick="return HandleCheckBox(this)"></select>
+        </div>
+        <div class="box" style="grid-column: 3; grid-row: 2 /span 4;">Hours</div>
+        <div class="box">
+            <input id="ch0" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch0">8 AM</label>
+        </div>
+        <div class="box">
+            <input id="ch4" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch4">Noon</label>
+        </div>
+        <div class="box">
+            <input id="ch8" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch8">4 PM</label>
+        </div>
+        <div class="box" style="grid-column: 1; grid-row: 3 /span 3;">Type</div>
+        <div class="box">
+            <input id="rad0" name="AvailabilityRad" type="radio" value="Campus only"><label for="rad0">Campus
+                only</label><br>
+            <input id="rad2" name="AvailabilityRad" type="radio" value="Flexible" checked="true"><label
+                for="rad2">Flexible</label><br>
+            <input id="rad1" name="AvailabilityRad" type="radio" value="Zoom only"><label for="rad1">Zoom only</label>
+        </div>
+        <div class="box">
+            <input id="ch1" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch1">9 AM</label>
+        </div>
+        <div class="box">
+            <input id="ch5" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch5">1 PM</label>
+        </div>
+        <div class="box">
+            <input id="ch9" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch9">5 PM</label>
+        </div>
+        <div class="box">
+            <input id="ch2" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch2">10 AM</label>
+        </div>
+        <div class="box">
+            <input id="ch6" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch6">2 PM</label>
+        </div>
+        <div class="box">
+            <input id="ch10" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch10">6 PM</label>
+        </div>
+
+        <div class="box">
+            <input id="ch3" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch3">11 AM</label>
+        </div>
+        <div class="box">
+            <input id="ch7" name="Hours" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch7">3 PM</label>
+        </div>
+        <div class="box">
+            <input id="ch11" name="Hours" type="checkbox"onclick="return HandleCheckBox(this)"><label for="ch11">7 PM</label>
+        </div>
+        <div class="box" style="grid-column: 1 /span 3;">
+            <input type="button" value="Add to Availability" id="addAvailability">
+        </div>
+        <div class="box" style="grid-column: 4 /span 3;">
+            <input type="button" value="Clear Availability" id="clearAvailable">
+        </div>
+        <div class="box" style="grid-column: 1 /span 6;">
+            <textarea rows="4" cols="60" readonly id="Results"></textarea>
+        </div>
+        <div class="box" style="grid-column: 1 /span 6;">
+            <input type="button" value="Send Availability" disabled="true" id="sendAvailability">
+        </div>
+    </div>
+
+</body>
+<script>//Mark Okin
+    let hours = 0;
+    Days = [];
+    let Day = ["Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    mySelect = document.getElementById("days");
+    for (i = 0; i < Day.length; i++) {
+        let myOption = document.createElement("option");
+        myOption.text = Day[i];
+        myOption.value = i + 1;
+        mySelect.add(myOption, null);
+    }
+    document.getElementById("addAvailability").addEventListener("click", btnhandleButton);
+    document.getElementById("clearAvailable").addEventListener("click", clearbutton);
+    document.getElementById("sendAvailability").addEventListener("click", sendButton);
+    function btnhandleButton() {
+        document.getElementById("addAvailability").disabled=false;
+        let Hours = [];
+        for (let i = 0; i < document.getElementsByName("Hours").length; i++) {
+         if (document.getElementsByName("Hours")[i].checked) {
+            //alert(document.getElementsByName("chkMovie[]")[i].value);
+            Hours.push(document.getElementsByName("Hours")[i].value);
+         }
+      }
+      for (let i = 0; i < document.getElementsByName("AvailabilityRad").length; i++) {
+         if (document.getElementsByName("AvailabilityRad")[i].checked) {
+            available = document.getElementsByName("AvailabilityRad")[i].value;
+            
+         }//end if 
+      }//end for
+      let dayy= document.getElementById("days").value;
+      document.getElementById("Results").value = available + " " + Hours;
+    }
+
+    function HandleCheckBox(){
+        document.getElementById("sendAvailability").disabled=false;
+        
+    }
+    function sendButton(){
+        let name = document.getElementById("name").value;
+         if (name == " ") {
+            alert("Problem with value entered for Name");
+            return;
+         }
+         let email = document.getElementById("email").value;
+         if (name == " ") {
+            alert("Problem with value entered for Email");
+            return;
+         }
+    }
+    function clearbutton(){
+       document.getElementById("Results").value = " ";
+       hours = 0;
+       Days = [];
+       document.getElementById("sendAvailability").disabled=true;
+       for (let i = 0; i < document.getElementsByName("Hours")[i].length; i++) {
+        document.getElementsByName("Hours").checked = false;
+       }
+       document.getElementById("rad2").checked = true;
+
+}
+</script>
+
+</html>
