@@ -1,0 +1,114 @@
+{
+	"movies": [
+		{
+			"title": "Searching for Bobby Fischer",
+			"year": "1993",
+			"director": "Steven Zaillian",
+			"cast": " Joe Mantegna, Ben Kingsley, Max Pomeranc, Joan Allen",
+			"poster": "Searching.jpg",
+			"runtime": "109",
+			"imdb": "tt0108065",
+			"desc": "A prepubescent chess prodigy is encouraged to harden himself in order to become a champion like the famous but unlikable Bobby Fischer.",
+			"genre": "Documentary, Biography, History"
+		},
+		{
+			"title": "Bobby Fischer Against the World",
+			"year": "2011",
+			"director": "Liz Garbus",
+			"cast": "Bobby Fischer, David Edmonds, Anthony Saidy, Susan Polgar",
+			"poster": "Bobby.jpg",
+			"runtime": "93",
+			"imdb": "tt1777551",
+			"desc": "'Bobby Fischer Against the World' is a documentary feature exploring the tragic and bizarre life of the late chess master Bobby Fischer. The drama of Bobby Fischer's career was undeniable, from his troubled childhood, to his rock star status as World Champion and Cold War icon, to his life as a fugitive on the run. This film explores one of the most infamous and mysterious characters of the 20th century.",
+			"genre": "Documentary, Biography, History"
+		},
+		{
+			"title": "Queen of Katwe",
+			"year": "2016",
+			"director": "Mira Nair",
+			"cast": "Madina Nalwanga, David Oyelowo, Lupita Nyong'o, Martin Kabanza",
+			"poster": "Queen.jpg",
+			"runtime": "124",
+			"imdb": "tt4341582",
+			"desc": "A Ugandan girl sees her world rapidly change after being introduced to the game of chess.",
+			"genre": "Biography, Drama, Sport"
+		},
+		{
+			"title": "Pawn Sacrifice",
+			"year": "2014",
+			"director": "Edward Zwick",
+			"cast": "Tobey Maguire, Liev Schreiber, Peter Sarsgaard, Michael Stuhlbarg",
+			"poster": "Pawn.jpg",
+			"runtime": "115",
+			"imdb": "tt1596345",
+			"desc": "Set during the Cold War, American chess prodigy Bobby Fischer finds himself caught between two superpowers and his own struggles as he challenges the Soviet Empire.",
+			"genre": "Biography, Drama, History"
+		},
+		{
+			"title": "The Dark Horse",
+			"year": "2014",
+			"director": "James Napier Robertson",
+			"cast": " Cliff Curtis, James Rolleston, Kirk Torrance, James Napier Robertson",
+			"poster": "Dark.jpg",
+			"runtime": "124",
+			"imdb": "tt2192016",
+			"desc": "A brilliant but troubled New Zealand chess champion finds purpose by teaching underprivileged children about the rules of chess and life.",
+			"genre": "Biography, Drama"
+		},
+		{
+			"title": "Game Over",
+			"year": "2003",
+			"director": "Vikram Jayanti",
+			"cast": "Marc Ghannoum, Joel Benjamin, Michael Greengard, Anatoli Karpov",
+			"poster": "Game.jpg",
+			"runtime": "90",
+			"imdb": "tt0379296",
+			"desc": "In 1997, chess champion Garry Kasparov goes head-to-head against IBM's computer, Deep Blue, and accuses IBM of cheating its way to victory. Interviews with Kasparov, his manager and members of the Deep Blue team illuminate the controversy.",
+			"genre": "Documentary"
+		},
+		{
+			"title": "Fresh",
+			"year": "1994",
+			"director": "Boaz Yakin",
+			"cast": "Sean Nelson, Giancarlo Esposito, Samuel L. Jackson, N'Bushe Wright",
+			"poster": "Fresh.jpg",
+			"runtime": "114",
+			"imdb": "tt0109842",
+			"desc": "Death and violence anger a twelve-year-old drug courier, who sets his employers against each other.",
+			"genre": "Crime, Drama, Thriller"
+		},
+		{
+			"title": "Knight Moves",
+			"year": "1992",
+			"director": "Carl Schenkel",
+			"cast": "Christopher Lambert, Tom Skerritt, Codie Lucas Wilbee, Joshua Murray",
+			"poster": "Moves.jpg",
+			"runtime": "116",
+			"imdb": "tt0104627",
+			"desc": "During a chess tournament, grand master Peter is suspected of murdering Debi after sex. He helps the police as the murders continue.",
+			"genre": "Crime, Drama, Mystery"
+		},
+		{
+			"title": "The Luzhin Defence",
+			"year": "2000",
+			"director": "Marleen Gorris",
+			"cast": "John Turturro, Emily Watson, Geraldine James, Stuart Wilson",
+			"poster": "Luzhin.jpg",
+			"runtime": "109",
+			"imdb": "tt0211492",
+			"desc": "Two worlds collide when an eccentric genius falls in love with a strong-willed society beauty.",
+			"genre": "Drama, Romance"
+		},
+		{
+			"title": "Knights of the South Bronx",
+			"year": "2005",
+			"director": "Allen Hughes",
+			"cast": "Ted Danson, Malcolm David Kelley, Brian Markinson, Kate Vernon",
+			"poster": "Bronx.jpg",
+			"runtime": "89",
+			"imdb": "tt0471768",
+			"desc": "A business man decides that he wants to teach school in the inner city and chooses a tough school in the South Bronx. He teaches the children how to play the game of chess, and along the way they learn a lot about life.",
+			"genre": "Drama"
+		}
+	]
+}

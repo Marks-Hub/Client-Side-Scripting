@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+         .wrapper {
+            display: grid;
+            grid-gap: 5px;
+            width: 760px;
+            grid-template-columns: 250px 250px 250px;
+            background-color: rgb(17, 230, 17);
+            color: #111;
+            border-radius: 5px;
+         }
+
+         .box {
+            background-color: rgb(21, 231, 221);
+            color: black;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+            border: solid black 1px;
+         }
+         label{
+            display: inline-block;
+            width: 150px;
+         }
+
+      </style>
+      <title>Mark Okin's Vue Sundae</title><!--Mark Okin-->
+   </head>
+
+   <body>
+      <div class="wrapper" id="Sundae">
+         <div class="box" style="grid-column: 1 / span 2; grid-row: 1 ">
+            <h2>Number of scoops</h2></div>
+         <div class="box">
+            <select v-model="user_scoops" v-on:change="PriceCalculate">
+               <option :value="item" v-for="(item, index) in scoops" >{{item.number}}</option>
+            </select>
+         </div>
+         <div class="box" style="grid-column: 1 / span 3;">
+            <h2>Flavors</h2>
+         </div>
+         <div class="box">
+         <span v-for="anObj in flavors" style="background-color: white;">
+               <input type="radio" :id="anObj.name" name="radflavors" :value="anObj" v-model="user_flavors" v-on:change="PriceCalculate"/>
+               <label :for="anObj.name">{{anObj.name}}</label></br>
+         </span>
+         </div>
+         <div class="box" style="grid-column: 1 / span 3;">
+            <h2>Toppings</h2>
+         </div>
+         <div class="box">
+            <span v-for="anObj in toppings" style="background-color: white;" v-on:change="PriceCalculate">
+               <input type="checkbox" :id="anObj.name" :value="anObj" v-model="user_toppings" >
+               <label :for="anObj.name">{{anObj.name}}</label>
+               <br />
+           </span>
+         </div>
+         <div class="box" style="grid-column: 1 / span 3;">
+            <h2>Order Info</h2>
+         </div>
+         <div class="box" style="grid-column: 1 / span 3;">
+            Scoops: {{scoops.number}} </br>
+            Flavor Code: {{code}}  </br>
+            Toppings: <label  v-for="item in user_toppings"> {{item.code}}|</label></br>
+            Total: {{total}}
+         </div>
+      </div>
+      <script src="Sundae.js"></script>
+   </body>
+
+</html>

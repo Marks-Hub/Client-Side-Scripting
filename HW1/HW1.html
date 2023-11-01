@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW1</title>
+    <style type="text/css">
+        .header2 {
+            background-color: rgb(233, 236, 13);
+            color: rgb(211, 26, 218);
+        }
+
+        body {
+            background-color: cadetblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #everything {
+            background-color: white;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #header {
+            background-color: #66CCFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #paragraph {
+            padding: 10px;
+        }
+
+        #ordered {
+            width: 180px;
+        }
+
+        #paragraph {
+            width: 600px;
+            float: right;
+        }
+
+        #footer {
+            clear: both;
+            padding: 10px;
+            background-color: #66CCFF;
+            padding: 10px;
+            color: white;
+        }
+
+        #ordered .selected {
+            font-weight: bold;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: red;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="everything">
+        <div id="header">
+            <h1>
+                Hello World
+            </h1>
+        </div>
+        <div class="header2">
+            <h2>This is HW 1</h2>
+        </div>
+        <div id="paragraph">
+            <p>This was written in a p tag. A p tag stands for paragraph I think. A paragraph is made up of sentences
+                and senteces are made up of words and words are made up of letters.
+                So, what are letters made of? Well according to <a
+                    href="https://en.wikipedia.org/wiki/Letter_(alphabet)">wikipedia</a>, "A letter is a segmental
+                symbol of a phonemic
+                writing system". </p><br><br>
+            <p> Now, would you believe me if I said that everything you've read so far was completely meaningless and
+                had no real point? If so then you might enjoy a list
+                of my recent favorite shows and animes.<br><br>
+            </p>
+        </div>
+        <div id=ordered>
+            <span style="color:blue">Ranked Shows</span><br>
+            <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2020/10/best-tv-shows-to-binge-watch-social.png"
+                alt="Shows" width="300" height="200">
+            <ol>
+                <li><a class="selected" href="">Bad</a> </li>
+                <li><a href="">The Office</a></li>
+                <li><a href="">The Boys</a></li>
+            </ol>
+        </div>
+        <h3>Wasn't sure where a line would make sense so here will have to do.</h3>
+        <hr>
+        <div id=unordered>
+            <span style="color:red">Animes (unordered because I can't decide my favorites)</span><br>
+            <img src="https://assets-prd.ignimgs.com/2022/08/17/top25animecharacters-blogroll-1660777571580.jpg"
+                alt="Animes" width="300" height="200">
+            <ul>
+                <li>Code Geass</li>
+                <li>Mob Psycho</li>
+                <li>Attack on Titan</li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer"> @Mark Okin Incorporated
+
+    </div>
+</body>
+
+<script>
+    var number = 5; //this is a comment
+    var number2 = 6;
+    var add = number + number2;
+    var words = "yogi bear";
+    var words2 = " is ok";
+    var sentence = words + words2;
+    var a = new Array(2);
+    a[0] = "Yes";
+    a[1] = "No";
+
+    var alphabet = "ABCDEFGH";
+    var shorter = alphabet.substring(2, 4)
+    var array;
+    for (i = 1; i < number; i++) {
+        document.write(i + "" + sentence + " ");
+    }
+    document.write(a[1] + " ");
+    document.write(shorter + " ");
+    document.write(add + " ");
+    document.write(sentence);
+</script>
+
+</html>

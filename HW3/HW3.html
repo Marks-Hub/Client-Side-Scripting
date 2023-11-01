@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .fa-solid {
+            color: blue;
+            font-size: 100px;
+
+        }
+
+        .fa-solid:hover {
+            color: red;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/b6ea633681.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>HW3</h1>
+    <table>
+        <colgroup>
+            <col span="2" style="background-color:rgb(196, 23, 144)">
+            <col style="background-color:rgb(14, 218, 116)">
+        </colgroup>
+        <tr>
+            <th>NO#</th>
+            <th>Movie Title</th>
+            <th>Ticket Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Avengers: Endgame</td>
+            <td>$53</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Scream 6</td>
+            <td>$49</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li><data >Peanut butter</data></li>
+        <li><data >Nutella</data></li>
+        <li><data >Strawberry Jam</data></li>
+    </ul>
+
+    <input list="Food" name="Foods" id="Foods">
+
+    <datalist id="Food">
+        <option value="Eggs">
+        <option value="Bread">
+        <option value="Cake">
+        <option value="Coke">
+        <option value="Meat">
+    </datalist>
+
+    <dl>
+        <dt>Temperate literal</dt>
+        <dd>Temperate literals allow you to write code and make the code look similar to how it would look when printed
+            or displayed.
+            This means you don't have to contactinate your strings and things are more readable.
+        </dd>
+    </dl>
+    <details>
+        <summary>JavaScript Let vs Var vs Constant</summary>
+        <p>When you declare a variable with var its scope is not limited to the block it
+            was defined, but instead the function, unlike let and const, which are limited to their
+            respective blocks in which they are defined. When you use var to define a global variable it attaches
+            itself to the window object. It is overall better to avoid using the window object.</p>
+    </details>
+
+    <p>I am always making <del>mistaks</del> <ins>mistakes </ins>in my writing</p>
+
+    <p><dfn>This</dfn> references the object that is executing the current function. if a function is part of an object
+        we call the
+        function and method. If that function is a method in an object <dfn>This</dfn> references that object itself or if that
+        function is not
+        part of an object <dfn>This</dfn> references the global object which is the window object in browsers and global in node.
+    </p>
+
+    <div id="ghost">
+        <i class="fa-solid fa-ghost"></i>
+    </div>
+</body>
+
+</html>

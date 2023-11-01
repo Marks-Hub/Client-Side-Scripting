@@ -1,0 +1,85 @@
+{
+	"scoops": [
+		{
+			"number": "1 scoop",
+			"scoop_price": 1.75,
+			"topping_price": 0.25
+		},
+		{
+			"number": "2 scoops",
+			"scoop_price": 2.75,
+			"topping_price": 0.40
+			
+
+		},
+		{
+			"number": "3 scoops",
+			"scoop_price": 3.75,
+			"topping_price": 0.65
+		}
+	],
+	"flavors": [
+		{
+			"name": "Vanilla",
+			"code": "VNLA"
+		},
+		{
+			"name": "Chocolate",
+			"code": "CHOC"
+		},
+		{
+			"name": "Butter Pecan",
+			"code": "BUPE"
+		},
+		{
+			"name": "Mint Chocolate Chip",
+			"code": "MICC"
+		},
+		{
+			"name": "Cookies 'N Cream",
+			"code": "CNCR"
+		},
+		{
+			"name": "Coffee",
+			"code": "CFFE"
+		}
+	],
+	"toppings": [
+		{
+			"name": "Hot Fudge",
+			"code": "HTFG"
+		},
+		{
+			"name": "Peanut Butter",
+			"code": "PNTB"
+		},
+		{
+			"name": "Chocolate Sauce",
+			"code": "CHSA"
+		},
+		{
+			"name": "Marshmallow",
+			"code": "MRSH"
+		},
+		{
+			"name": "Rainbow Sprinkles",
+			"code": "RBSP"
+		},
+		{
+			"name": "Chocolate Sprinkles",
+			"code": "CHSP"
+		},
+		{
+			"name": "Peanuts",
+			"code": "PNTS"
+		},
+		{
+			"name": "Walnuts",
+			"code": "WLNT"
+		},
+		{
+			"name": "Strawberries",
+			"code": "STRB"
+		}
+	]
+}

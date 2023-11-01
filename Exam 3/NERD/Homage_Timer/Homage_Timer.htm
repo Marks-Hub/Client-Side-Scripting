@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			text-align: center;
+			font-family: Tahoma, Sans-serif;
+			background-color: dodgerblue;
+			color: lightgreen;
+		}
+
+		table {
+			margin: auto;
+		}
+
+		td {
+			text-align: left;
+		}
+
+		button {
+			width: 150px;
+		}
+	</style>
+</head>
+<title>Mark Okin's Homage-O-Matic </title>
+<!--Mark Okin-->
+
+<body>
+	<h1>Mark Okin's Homage-O-Matic</h1>
+	<p>Based on a series of works by Josef Albers.</p>
+	<br /><br />
+	<svg id="svgRandom" width="500" height="500" style="background-color: #330000;">
+		<rect id="rectRandom_1" x="50" y="75" width="400" height="400" style="fill: #660000;" />
+		<rect id="rectRandom_2" x="100" y="150" width="300" height="300" style="fill: #990000;" />
+		<rect id="rectRandom_3" x="150" y="225" width="200" height="200" style="fill: #cc0000;" />
+	</svg>
+	<table>
+		<tr>
+			<td>Rect 1 (outermost) colors:</td>
+			<td id="outermost">xxx</td>
+		</tr>
+		<tr>
+			<td>Rect 2 colors:</td>
+			<td id="2colors">xxx</td>
+		</tr>
+		<tr>
+			<td>Rect 3 colors:</td>
+			<td id="3colors">xxx</td>
+		</tr>
+		<tr>
+			<td>Rect 4 (innermost) colors:</td>
+			<td id="4colors">xxx</td>
+		</tr>
+	</table>
+
+	<br />
+	<button onclick="Start1()" id="start1">Start 1</button>
+	<button onclick="Start2()" id="start2">Start 2</button>
+	<button onclick="Start3()" id="start3">Start 3</button>
+	<button onclick="Start4()" id="start4">Start 4</button>
+	<script>
+		function Start1() {
+			if (document.getElementById("start1").innerText == "Stop 1") {
+				document.getElementById("start1").innerText = "Start 1"
+				clearInterval(timerID);
+			}
+			else {
+				document.getElementById("start1").innerText = "Stop 1"
+				timerID = setInterval(changeColor1, 1000);
+			}
+		}
+		function Start2() {
+			if (document.getElementById("start2").innerText == "Stop 2") {
+				document.getElementById("start2").innerText = "Start 2"
+				clearInterval(timerID);
+			}
+			else {
+				document.getElementById("start2").innerText = "Stop 2"
+				timerID = setInterval(changeColor2, 1000);
+			}
+		}
+		function Start3() {
+			if (document.getElementById("start3").innerText == "Stop 3") {
+				document.getElementById("start3").innerText = "Start 3"
+				clearInterval(timerID);
+			}
+			else {
+				document.getElementById("start3").innerText = "Stop 3"
+				timerID = setInterval(changeColor3, 1000);
+			}
+		}
+		function Start4() {
+
+			if (document.getElementById("start4").innerText == "Stop 4") {
+				document.getElementById("start4").innerText = "Start 4"
+				clearInterval(timerID);
+			}
+			else {
+				document.getElementById("start4").innerText = "Stop 4"
+				timerID = setInterval(changeColor4, 1000);
+			}
+		}
+		function changeColor1() {
+			let R = Math.floor(Math.random() * 256);
+			let G = Math.floor(Math.random() * 256);
+			let B = Math.floor(Math.random() * 256);
+			document.getElementById("svgRandom").style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+			document.getElementById("outermost").innerText = "Red: " + R + " "+  "Green: " + G + " " + "Blue: "+B;
+
+		}
+		function changeColor2() {
+			R = Math.floor(Math.random() * 256);
+			G = Math.floor(Math.random() * 256);
+			B = Math.floor(Math.random() * 256);
+			document.getElementById("rectRandom_1").style.fill = `rgb(${R}, ${G}, ${B})`;
+			document.getElementById("2colors").innerText = "Red: " + R + " "+  "Green: " + G + " " + "Blue: "+B;
+
+
+		}
+		function changeColor3() {
+			R = Math.floor(Math.random() * 256);
+			G = Math.floor(Math.random() * 256);
+			B = Math.floor(Math.random() * 256);
+			document.getElementById("rectRandom_2").style.fill = `rgb(${R}, ${G}, ${B})`;
+			document.getElementById("3colors").innerText = "Red: " + R + " "+  "Green: " + G + " " + "Blue: "+B;
+
+		}
+		function changeColor4() {
+			R = Math.floor(Math.random() * 256);
+			G = Math.floor(Math.random() * 256);
+			B = Math.floor(Math.random() * 256);
+			document.getElementById("rectRandom_3").style.fill = `rgb(${R}, ${G}, ${B})`;
+			document.getElementById("4colors").innerText = "Red: " + R + " "+  "Green: " + G + " " + "Blue: "+B;
+
+		}
+
+	</script>
+</body>
+
+</html>
