@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Okin's Blue Bunny </title>
+</head>
+
+<body>
+    <!--Mark Okin-->
+    <h1>Mark Okin's Blue Bunny </h1>
+    <input type="button" id="bunnyHop" value="Start Hopping!">
+    </br>
+    </br>
+    </br>
+    </br>
+
+    <img src="bb1.gif" id="bunny1" style="position:absolute; width:120px; left:50px;">
+</body>
+<script> //Mark Okin
+    let t = 0;
+    let delta = 10;
+    document.getElementById("bunnyHop").addEventListener("click", btnBunny);
+
+    pageWidth = parseInt(window.innerWidth);
+    console.log(pageWidth);
+    function btnBunny() {
+        
+        if (document.getElementById("bunnyHop").value == "Start Hopping!") {
+            timerID = setInterval(timerFunc, 20);
+
+            document.getElementById("bunnyHop").value = "Stop Hopping!";
+        }
+        else {
+            document.getElementById("bunnyHop").value = "Start Hopping!";
+            clearInterval(timerID);
+        }
+
+    }
+    function timerFunc() {
+        t++;
+        let leftVal = document.getElementById("bunny1").style.left.replace("px", ""); //= parseInt(delta) +"px";  
+        leftVal = parseInt(leftVal) + delta;
+        document.getElementById("bunny1").style.left = leftVal + "px";
+
+        if ( leftVal > pageWidth){
+            document.getElementById("bunny1").src = "bb2.gif";
+            delta = -10;
+        }
+        if( leftVal < -120){
+            document.getElementById("bunny1").src = "bb1.gif";
+            delta = 10;
+        }
+        mytop = 300- 100*Math.abs(Math.cos(0.1*t))
+        document.getElementById("bunny1").style.top = mytop + "px";
+    }
+
+</script>
+
+</html>

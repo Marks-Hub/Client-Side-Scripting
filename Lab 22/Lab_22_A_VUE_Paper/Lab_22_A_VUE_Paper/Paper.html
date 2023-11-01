@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<meta charset="UTF-8" />
+	<title>Mark Okin's Paper</title>
+	<style>
+		body {
+			text-align: center;
+			color: rgb(255, 0, 221);
+			background-color: gold;
+		}
+
+		.wrapper {
+			text-align: left;
+			display: grid;
+			grid-gap: 5px;
+			width: 605px;
+			grid-template-columns: 300px 300px;
+			background-color: #000;
+			color: #111;
+			border-radius: 5px;
+			/* justify-content: center; */
+			margin-Left: auto;
+			margin-right: auto;
+		}
+
+		.box {
+			background-color: #910785;
+			color: #fffb00;
+			border-radius: 5px;
+			padding: 20px;
+			font-size: 1em;
+			border: solid black 1px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Mark Okin's Paper </h1>
+	<!--Mark Okin-->
+	<div id="vue_paper">
+		<div class="wrapper">
+
+			<div class="box">Paper Size:
+				<select v-model="paper_size"  v-on:change="calc">
+					<option :value="item" v-for="(item, index) in paper_sizes"  v-on:change="calc">{{item.name}}</option>
+				</select>
+			</div>
+			<div class="box" style="grid-column: 2; grid-row: 1 /span 3;">Color checkboxes
+				<span v-for="anObj in Color"> </br>
+					<input type="checkbox" :id="anObj.name" :value="anObj" v-model="user_color"  v-on:change="calc">
+					<label :for="anObj.name">{{anObj.name}}</label>
+					<br />
+				</span>
+			</div>
+			<div class="box">Number of sheets </br>
+				<span v-for="anObj in sheets">
+					<input type="radio" :id="anObj.name" name="radSandwich" :value="anObj" v-model="User_Sheets"  v-on:change="calc"/>
+					<label :for="anObj.name">{{anObj.name}}</label>
+					<br />
+				</span>
+			</div>
+			<div class="box">Price info:</br>
+				<span>Size: {{ paper_size.name}} --  ${{ paper_size.price}}</span> </br>
+				<span>Sheets: {{ User_Sheets.name}} --  Factor: {{ User_Sheets.factor}}</span> </br>
+				<span><label v-for="item in user_color" > {{item.name}} -- </label> {{user_color.length}}</span></br>
+				<span>Price: {{ total}} </span> </br>
+			</div>
+		</div>
+		
+
+	</div>
+	<script src="paper.js"></script>
+</body>
+
+</html>

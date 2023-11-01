@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Mark Okin's Ramen </title>
+
+		<style>
+			body,
+			iframe {
+				text-align: center;
+				
+				color: aqua;
+				background-color: brown;
+			}
+
+			.wrapper {
+				text-align: left;
+				display: grid;
+				grid-gap: 5px;
+				width: 930px;
+				grid-template-columns: 340px 80px 500px;
+				background-color: #000;
+				color: #111;
+				border-radius: 5px;
+				/* justify-content: center; */
+				margin-Left: auto;
+				margin-right: auto;
+			}
+
+			.box {
+				background-color: #cccccc;
+				color: #24aed1;
+				border-radius: 5px;
+				padding: 20px;
+				font-size: 1em;
+				border: solid rgb(165, 19, 19) 1px;
+			}
+		</style>
+	</head>
+
+	<body>
+<h1>Mark Okin's Ramen</h1><!--Mark Okin-->
+		<div class="wrapper">
+			<div class="box" style="grid-column: 1 / span 2; grid-row: 1;" >
+			<span id="selectRamen"> <select id="selRamen"></select></span></div>
+			<div class="box" style="grid-column: 3; grid-row: 1 /span 6;">
+				<img id="imageRamen" height="400px" src= " ">
+			</div>
+			<div class="box">Number of servings </div>
+			<div class="box">	<span id="servings"></span></div>
+			<div class="box">Serving size (oz) </div>
+			<div class="box"><span id="servingsSize"></span></div>
+			<div class="box">Calories per serving </div>
+			<div class="box"><span id="CalorieServings"></span></div>
+			<div class="box">Carbs per serving </div>
+			<div class="box"><span id="CarbServings"></span></div>
+			<div class="box">Sodium per serving (mg) </div>
+			<div class="box"><span id="SodiumServings"></span></div>
+			<div class="box" style="grid-column: 1 / span 3;"><span id="description"></span></div>
+
+
+		</div>
+        <script src="ramenClass.js"></script>
+        <script src="ramenClassUse.js"></script>
+	</body>
+
+</html>

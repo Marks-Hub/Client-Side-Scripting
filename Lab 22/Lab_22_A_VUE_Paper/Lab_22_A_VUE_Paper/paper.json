@@ -1,0 +1,64 @@
+{
+   "sizes": [
+      {
+         "name": "6 by 6 inch",
+         "price": 1.75
+      },
+      {
+         "name": "9 by 12 inch",
+         "price": 2.25
+      },
+      {
+         "name": "12 by 18 inch",
+         "price": 2.75
+      },
+      {
+         "name": "18 by 18 inch",
+         "price": 3.25
+      }
+   ],
+   "numbers": [
+      {
+         "name": "25 sheets",
+         "factor": 1
+      },
+      {
+         "name": "50 sheets",
+         "factor": 1.9
+      },
+      {
+         "name": "100 sheets",
+         "factor": 3.6
+      },
+      {
+         "name": "200 sheets",
+         "factor": 7
+      }
+   ],
+   "colors": [
+      {
+         "name": "Black"
+      },
+      {
+         "name": "White"
+      },
+      {
+         "name": "Red"
+      },
+      {
+         "name": "Orange"
+      },
+      {
+         "name": "Yellow"
+      },
+      {
+         "name": "Green"
+      },
+      {
+         "name": "Blue"
+      },
+      {
+         "name": "Purple"
+      }
+   ]
+}

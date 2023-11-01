@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- The VUE CDN  version 3 -->
+    <!-- <script src="https://unpkg.com/vue@3"></script>  -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta name="keywords" content="Vue, La Salle University, Thomas Blum, Tom Blum" />
+    <meta name="description" content="Vue example" />
+    <title>Vue Checkboxes</title>
+    <link rel="stylesheet" href="Lab21.css">
+</head>
+
+<body>
+    <div id="vue_fiveGuys">
+        <span v-for="anObj in sandwiches">
+            <input type="radio" :id="anObj.sandwich_name" name="radSandwich" :value="anObj" v-model="user_sandwich"
+                v-on:change="calc" />
+            <label :for="anObj.sandwich_name">{{anObj.sandwich_name}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span v-for="anObj in cook_levels">
+            <input type="radio" :id="anObj.name" name="radCookLevel" :value="anObj" v-model="User_cookLvl"
+                v-on:change="calc" />
+            <label :for="anObj.name">{{anObj.name}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span v-for="anObj in toppings">
+            <input type="checkbox" :id="anObj.topping_name" :value="anObj" v-model="user_toppings" v-on:change="calc">
+            <label :for="anObj.topping_name">{{anObj.topping_name}}</label>
+            <br />
+        </span><br /><br /><br />
+        <span v-for="anObj in sides">
+            <input type="checkbox" :id="anObj.side_name" :value="anObj" v-model="user_sides" v-on:change="calc">
+            <label :for="anObj.side_name">{{anObj.side_name}}</label>
+            <br />
+        </span></span><br /><br /><br />
+        <span>Sandwich Choice: {{ user_sandwich.sandwich_name}} --- {{user_sandwich.sandwich_price}}</span></br>
+        <span>Cook Level: {{ User_cookLvl.name}} </span></br>
+
+        <span>Toppings:
+            <label v-for="item in user_toppings" > {{item.topping_name}}| </label>
+        </span></br>
+        <span >Sides: <label v-for="item in user_sides" >{{ item.side_name}} --- {{item.side_price}}         </label></span></br>
+        <span>Total:
+            <label > {{total}} </label>
+        </span></br>
+    </div>
+
+    <script src="Lab21.js"></script>
+</body>
+
+</html>

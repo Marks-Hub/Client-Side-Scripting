@@ -1,0 +1,74 @@
+{
+   "sandwich": [
+      {
+         "sandwich_name": "Hamburger",
+         "sandwich_price": 6.19
+      },
+      {
+         "sandwich_name": "Cheeseburger",
+         "sandwich_price": 6.99
+      },
+      {
+         "sandwich_name": "Bacon Hamburger",
+         "sandwich_price": 7.19
+      },
+      {
+         "sandwich_name": "Bacon Cheeseburger",
+         "sandwich_price": 7.89
+      }
+   ],
+   "cook_level": [
+      {
+         "name": "Rare",
+         "time": 2.00
+      },
+      {
+         "name": "Medium Rare",
+         "time": 2.30
+      },
+      {
+         "name": "Medium well",
+         "time": 3.00
+      },
+      {
+         "name": "Well",
+         "time": 3.30
+      }
+   ],
+   "toppings": [
+      {
+         "topping_name": "Mayo"
+      },
+      {
+         "topping_name": "Lettuce"
+      },
+      {
+         "topping_name": "Pickles"
+      },
+      {
+         "topping_name": "Tomatoes"
+      },
+      {
+         "topping_name": "Grilled onions"
+      },
+      {
+         "topping_name": "Grilled mushrooms"
+      },
+      {
+         "topping_name": "Ketchup"
+      },
+      {
+         "topping_name": "Mustard"
+      }
+   ],
+   "sides": [
+      {
+         "side_name": "Fries (Five Guys Style)",
+         "side_price": 3.79
+      },
+      {
+         "side_name": "Fries (Cajun Style)",
+         "side_price": 3.79
+      }
+   ]
+}

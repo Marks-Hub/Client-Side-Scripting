@@ -1,0 +1,17 @@
+body {
+    background-color: #78281F;
+    color: #F8F9F9;
+    font-size: 1.2em;
+    font-family: Tahoma, Verdana, sans-serif;
+ }
+ 
+ input {
+    font-size: 1.2em;
+ }
+ 
+
+ 
+ input[type="checkbox"]:checked+label {
+    background-color: #F8F9F9;
+    color: #78281F;
+ }

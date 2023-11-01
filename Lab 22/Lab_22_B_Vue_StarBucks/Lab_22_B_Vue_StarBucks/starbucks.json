@@ -1,0 +1,69 @@
+{
+"sizes":
+[
+{"size_name":"short", "size_oz":8, "size_factor":1},
+{"size_name":"tall", "size_oz":12, "size_factor":1.5},
+{"size_name":"grande", "size_oz":16, "size_factor":2},
+{"size_name":"venti", "size_oz":20, "size_factor":2.5}
+],
+"drinks":
+[
+{"drink_name":"Caffe Americano", 
+"drink_cal":5, 
+"drink_fat":0,
+"drink_protein":0,
+"drink_caff":75,
+"drink_desc":"Espresso shots are topped with hot water to produce a light layer of crema.",
+"drink_img":"CaffeAmericano.jpg"
+}, 
+{"drink_name":"Caffe Latte", 
+"drink_cal":100, 
+"drink_fat":3.5,
+"drink_protein":6,
+"drink_caff":75,
+"drink_desc":"Our dark, rich espresso balanced with steamed milk and a light layer of foam.",
+"drink_img":"CaffeLatte.jpg"
+}, 
+{"drink_name":"Caffe Mocha", 
+"drink_cal":200, 
+"drink_fat":9,
+"drink_protein":7,
+"drink_caff":90,
+"drink_desc":"We combine our rich, full-bodied espresso with bittersweet mocha sauce and steamed milk, then top it off with sweetened whipped cream.",
+"drink_img":"CaffeMocha.jpg"
+}, 
+{"drink_name":"Cappuchino", 
+"drink_cal":80, 
+"drink_fat":3,
+"drink_protein":7,
+"drink_caff":75,
+"drink_desc":"Dark, rich espresso lies in wait under a smoothed and stretched layer of thick foam.",
+"drink_img":"Cappuchino.jpg"
+}, 
+{"drink_name":"Caramel Cloud Macchiato", 
+"drink_cal":140, 
+"drink_fat":4,
+"drink_protein":6,
+"drink_caff":75,
+"drink_desc":"Our Cloud Macchiato is light and airy with layers of fluffy foam, cascading espresso, vanilla-flavored syrup and a drizzle of caramel.",
+"drink_img":"CaramelCloudMacciato.jpg"
+}, 
+{"drink_name":"Caramel Macchiato", 
+"drink_cal":120, 
+"drink_fat":4,
+"drink_protein":5,
+"drink_caff":75,
+"drink_desc":"Freshly steamed milk with vanilla-flavored syrup is marked with espresso and topped with caramel drizzle for an oh-so-sweet finish.",
+"drink_img":"CaramelMacciato.jpg"
+}, 
+{"drink_name":"Cinnamon Cloud Macchiato", 
+"drink_cal":140, 
+"drink_fat":4,
+"drink_protein":6,
+"drink_caff":75,
+"drink_desc":"Our Cloud Macchiato is light and airy with layers of fluffy foam, cascading espresso, cinnamon flavored syrup, a caramel drizzle and a dusting of cinnamon.",
+"drink_img":"CinnamonCloudMacciato.jpg"
+}
+]
+
+}

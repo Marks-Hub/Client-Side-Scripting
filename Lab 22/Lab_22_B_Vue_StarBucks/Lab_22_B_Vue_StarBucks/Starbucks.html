@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<meta charset="UTF-8" />
+	<style>
+		body {
+			text-align: center;
+			background-color: aquamarine;
+			color: crimson;
+		}
+
+		.wrapper {
+			text-align: left;
+			display: grid;
+			grid-gap: 5px;
+			width: 715px;
+			grid-template-columns: 150px 100px 300px 150px;
+			background-color: #000;
+			color: #111;
+			border-radius: 5px;
+			/* justify-content: center; */
+			margin-Left: auto;
+			margin-right: auto;
+		}
+
+		.box {
+			background-color: #cccccc;
+			color: #11cfcf;
+			border-radius: 5px;
+			padding: 20px;
+			font-size: 1em;
+			border: solid black 1px;
+		}
+	</style>
+	<title>Mark Okin's Vue Starbucks</title><!--Mark Okin-->
+</head>
+
+<body>
+	<h1>Mark Okin's Vue Starbucks</h1>
+	<div class="wrapper" id="starbucks">
+		<div class="box" style="grid-column: 1 / span 2;">
+			<select v-model="user_drinks" v-on:change="FatCalculate">
+				<option :value="item" v-for="(item, index) in drinks" v-on:change="FatCalculate">{{item.drink_name}}</option>
+			</select>
+		</div>
+		<div class="box" style="grid-row: 1 / span 5; grid-column: 3;"> <img :src="user_drinks.drink_img"
+				style="width: 100%;">
+		</div>
+		<div class="box" style="grid-row: 1 / span 5; grid-column: 4;">
+			<span v-for="anObj in sizes">
+				<input type="radio" :id="anObj.size_name" name="radsizes" :value="anObj" v-model="user_size" v-on:change="FatCalculate"/>
+				<label :for="anObj.size_name">{{anObj.size_name}}</label></br>
+			</span>
+			</br>
+			{{user_size.size_oz}}oz.
+		</div>
+		<div class="box">Calories: </div>
+		<div class="box"> {{user_drinks.drink_cal}}</div>
+
+		<div class="box">Fat(g)</div>
+		<div class="box"> {{fat}}</div>
+		<div class="box">Protien (g):</div>
+
+		<div class="box">{{user_drinks.drink_protein}}</div>
+		<div class="box">Caffiene (mg):</div>
+		<div class="box">{{user_drinks.drink_caff}}</div>
+
+		<div class="box" style="grid-row: 6; grid-column: 1/ span 4;">{{user_drinks.drink_desc}}</div>
+	</div>
+	<script src="Starbucks.js"></script>
+</body>
+
+</html>

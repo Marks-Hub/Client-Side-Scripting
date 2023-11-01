@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <ramen>
+    <name>Hakubaku 9.5oz Organic Japanese Noodles For Ramen</name>
+    <num_serve>5</num_serve>
+    <serving_size>2</serving_size>
+    <calories>200</calories>
+    <carbs>38</carbs>
+    <sodium>550</sodium>
+    <image>81rUWWn5gsL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B008968NHE</amazon>
+    <desc>Best Overall: Japanese ramen noodles, natural ingredients verified by USDA and Kosher, cooking instructions on the package.</desc>
+  </ramen>
+  <ramen>
+    <name>Maruchan Soy-Sauce Flavor Noodles For Ramen</name>
+    <num_serve>2</num_serve>
+    <serving_size>1.5</serving_size>
+    <calories>190</calories>
+    <carbs>26</carbs>
+    <sodium>890</sodium>
+    <image>91c3CGdqd2L.jpg</image>
+    <amazon>https://www.amazon.com/dp/B00CEIECZ0/</amazon>
+    <desc>Best Budget: Noodles made of wheat flour, soy sauce flavor, low price, quick to cook.</desc>
+  </ramen>
+  <ramen>
+    <name>Ichiran Tonkotsu-Flavored Noodles For Ramen</name>
+    <num_serve>5</num_serve>
+    <serving_size>5.3</serving_size>
+    <calories>474</calories>
+    <carbs>59.5</carbs>
+    <sodium>3000</sodium>
+    <image>71nfxvm0qQS.jpg</image>
+    <amazon>https://www.amazon.com/dp/B077T7HC88</amazon>
+    <desc>Best Tonkotsu Ramen: Hakata-style tonkotsu ramen with firm noodles, Ichiran signature red spicy sauce, Japan-imported product.</desc>
+  </ramen>
+  <ramen>
+    <name>Annie Chun&#x27;s Shoyu-Flavored Noodles For Ramen</name>
+    <num_serve>1</num_serve>
+    <serving_size>5.4</serving_size>
+    <calories>240</calories>
+    <carbs>49</carbs>
+    <sodium>890</sodium>
+    <image>812XXem4deL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B085HJMY9P</amazon>
+    <desc>Best Shoyu Ramen: American product, soy sauce soup with different frozen toppings, vegan-friendly, microwave-safe package.</desc>
+  </ramen>
+  <ramen>
+    <name>Sapporo Ichiban 3.6oz Shio-Flavored Noodles For Ramen</name>
+    <num_serve>3</num_serve>
+    <serving_size>1.2</serving_size>
+    <calories>160</calories>
+    <carbs>20</carbs>
+    <sodium>700</sodium>
+    <image>91Dp5SOKmhL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B00OA3NVRW</amazon>
+    <desc>Best Shio Ramen: Japanese instant noodles with salt-flavored broth, a packet of sesames attached, no trans fat.</desc>
+  </ramen>
+  <ramen>
+    <name>Nissin RAOH Miso-Flavored Noodles For Ramen</name>
+    <num_serve>1</num_serve>
+    <serving_size>3.77</serving_size>
+    <calories>340</calories>
+    <carbs>67</carbs>
+    <sodium>2290</sodium>
+    <image>81FwJDJLN7L.jpg</image>
+    <amazon>https://www.amazon.com/dp/B079TGH5B5</amazon>
+    <desc>Best Instant Noodles/Best Miso Ramen: Instant noodles with premium quality, triple-layer noodles, broth full of umami</desc>
+  </ramen>
+  <ramen>
+    <name>Hime 25.4oz Japanese Noodles For Ramen</name>
+    <num_serve>8</num_serve>
+    <serving_size>3.2</serving_size>
+    <calories>300</calories>
+    <carbs>63</carbs>
+    <sodium>1570</sodium>
+    <image>91fRqeFMwWL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B013H9TX58</amazon>
+    <desc>Best Air-Dried Ramen Noodles: Japanese ramen noodles from wheat flour, thick and chewy, large quantity.</desc>
+  </ramen>
+  <ramen>
+    <name>Sun Noodles 10oz Kaedama Noodles For Ramen</name>
+    <num_serve>2</num_serve>
+    <serving_size>5</serving_size>
+    <calories>370</calories>
+    <carbs>76</carbs>
+    <sodium>850</sodium>
+    <image>81ZZXh90cBL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B07DSP17ZB</amazon>
+    <desc>Best Fresh Noodles: Fresh handmade noodles; not containing dairy products, artificial colors, and preservatives; affordable cost; can be refrigerated or frozen.</desc>
+  </ramen>
+  <ramen>
+    <name>Ocean&#x27;s Halo 8.4oz Organic Noodles For Ramen</name>
+    <num_serve>4</num_serve>
+    <serving_size>2.1</serving_size>
+    <calories>200</calories>
+    <carbs>40</carbs>
+    <sodium>430</sodium>
+    <image>71IzLkGNYLL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B07W6RRK1Q</amazon>
+    <desc>Best Organic Ramen: Air-dried noodles verified by USDA, Vegan-friendly, no trans fat and saturated fat</desc>
+  </ramen>
+  <ramen>
+    <name>Lotus Foods Organic Millet &amp; Brown Rice Noodles For Ramen</name>
+    <num_serve>1</num_serve>
+    <serving_size>2.8</serving_size>
+    <calories>280</calories>
+    <carbs>51</carbs>
+    <sodium>920</sodium>
+    <image>71Konx0h0eL.jpg</image>
+    <amazon>https://www.amazon.com/dp/B00HKIBKQS</amazon>
+    <desc>Best Healthy Option: Noodles made of millet and brown rice, non-GMO, gluten-free, low sodium and MSG content</desc>
+  </ramen>
+</root>

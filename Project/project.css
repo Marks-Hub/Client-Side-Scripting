@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+ 
+ .wrapper {
+    text-align: left;
+    display: grid;
+    grid-gap: 5px;
+    width: 1180px;
+    grid-template-columns: 236px 236px 236px 236px 236px;
+    background-color: rgb(34, 1, 58);
+    color: rgb(34, 1, 58);
+    border-radius: 5px;
+    /* justify-content: center; */
+    margin-Left: auto;
+    margin-right: auto;
+ }
+ 
+ .box {
+    background-color: darkorange;
+    color: rgb(34, 1, 58);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1em;
+    border: solid black 1px;
+ }
+ * {
+   box-sizing: border-box;
+ }
+ .row::after {
+   background-color: darkorange;
+   content: "";
+   clear: both;
+   display: table;
+ }
+ .column {
+   background-color: darkorange;
+   float: left;
+   width: 33.33%;
+   padding: 5px;
+ }
+ /* Font awesome styiling*/
+ .fa-solid {
+  color: blue;
+  font-size: 100px;
+
+}
+
+.fa-solid:hover {
+  color: red;
+}
