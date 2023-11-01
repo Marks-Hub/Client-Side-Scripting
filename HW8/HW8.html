@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="HW8.css">
+</head>
+<body>
+
+<h2>Image Modal of Cool Car</h2>
+
+<img id="myImg" src="Wallpaper.jpg" alt="Car" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="chicken1.png" style="width:100%">
+    <img src="chicken2.png" style="width:100%">
+    <img src="chicken3.png" style="width:100%">
+    <img src="chicken4.png" style="width:100%">
+    <img src="chicken5.png" style="width:100%">
+    <img src="chicken6.png" style="width:100%">
+    <img src="chicken7.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="baked_good1.png" style="width:100%">
+    <img src="baked_good2.png" style="width:100%">
+    <img src="baked_good3.png" style="width:100%">
+    <img src="baked_good6.png" style="width:100%">
+    <img src="baked_good4.png" style="width:100%">
+    <img src="baked_good5.png" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="baked_good7.png" style="width:100%">
+    <img src="beef1.png" style="width:100%">
+    <img src="beef2.png" style="width:100%">
+    <img src="beef3.png" style="width:100%">
+    <img src="beef4.png" style="width:100%">
+    <img src="beef5.png" style="width:100%">
+    <img src="beef6.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="beef7.png" style="width:100%">
+    <img src="bread1.png" style="width:100%">
+    <img src="bread2.png" style="width:100%">
+    <img src="bread3.png" style="width:100%">
+    <img src="bread4.png" style="width:100%">
+    <img src="bread5.png" style="width:100%">
+  </div>
+</div>
+
+<h2>Fade in Overlay</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="Wallpaper.jpg" alt="Car cool Sci-fi" class="image">
+  <div class="overlay">
+    <div class="text">Cool Car!</div>
+  </div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>

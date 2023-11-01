@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW5</title>
+
+    <style>
+        h1 {
+            font-size: calc(10px + 2vw);
+        }
+        #cars{
+width: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HW5 Mark Okin</h1>
+
+    <label for="battery">Battery Percent:</label>
+    <meter id="battery" value="25" min="0" max="100">25 out of 100</meter><br>
+    </br></br>
+
+    <label for="Phone">Choose a Phone:</label>
+    <select name="phones" id="phones">
+        <optgroup label="Samsung">
+            <option value="Samsung Galaxy S22 Ultra">Samsung Galaxy S22 Ultra</option>
+            <option value="Samsung Galaxy S23 Ultra">Samsung Galaxy S23 Ultra</option>
+        </optgroup>
+        <optgroup label="IOS">
+            <option value="Iphone 14">Iphone 14</option>
+            <option value="Iphone 14 Pro Max">Iphone 14 Pro Max</option>
+        </optgroup>
+    </select>
+    </br></br>
+
+    <picture>
+        <source media="(min-width:650px)" srcset="7190818.jpg">
+        <source media="(min-width:465px)" srcset="2745188.jpg">
+        <img id="cars" src="6779087.jpg" alt="Cars">
+    </picture>
+    </br></br>
+
+    <pre>
+        A collection of the top 95 Sci Fi Car wallpapers and backgrounds available for download for free at https://wallpaperaccess.com/sci-fi-car.
+        </pre>
+    </br></br>
+
+    <label for="file">Charging progress:</label>
+    <progress id="file" value="42" max="100"> 32% </progress>
+    </br></br>
+
+    <p>Eleanor Roosevelt once said:
+        <q>The future belongs to those who believe in the beauty of their dreams.
+    </p>
+    </br></br>
+
+    <section>
+        <h2>Sci Fi Car Wallpapers</h2>
+        <p>A collection of the top 95 Sci Fi Car wallpapers and backgrounds available for download for free.
+            We hope you enjoy our<small> growing collection of HD images to use as a background</small> or home screen
+            for your smartphone or computer.
+            Please contact us if <strong>you want to publish a Sci Fi Car wallpaper</strong> on our site.</p>
+    </section>
+
+<h3>regular Experessions</h3>
+    <p> 
+        SSN: \d{3}-\d{2}-\d{3}
+        Credit Card: \d{4} \d{4} \d{4} \d{4} or \d{16}
+        LLbean: TA\d{6}
+        Canadian Postal Code: \p{L}\d\p{L} \d\p{L}\d
+    </p>
+</body>
+
+</html>

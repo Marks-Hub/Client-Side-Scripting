@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW6 Mark Okin</title>
+
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    p {
+      font-size: 1rem;
+      padding: 1rem;
+      margin: 1rem;
+
+    }
+
+    a {
+      font-size: 1rem;
+      padding: 0.2rem 1rem;
+    }
+
+    a.current {
+      color: white;
+      background-color: #bada55;
+      text-shadow: 1px 1px 1px #333;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    :target {
+      background-color: #bada55;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      HW6 Mark Okin
+    </h1>
+    </br>
+  </header>
+  <p>Angular is made by Google. huge framework with a lot of built-in features. Has tools like a command line interface
+    for managing projects. Angular uses typescript which is like Javascript but with additional features. Might be a
+    little harder than the others since it requires a more <sub>"complex setup"</sub></p>
+  <p>React is made by Facebook. It is minimalistic and focused on UI-building. Might need to search for libraries with
+    solutions for your issues. Mostly everything is in Javascript and there's less HTML.<sup>React seems to be the
+      most</sup> popular and most used among the 3.</p>
+  <p> Vue is an open-source project with a team of collaborators. Focused on code but offers CLI/ more features. For both React and Vue, you decide what is to be rendered on the screen. They all have relatively similar startup performance.</p>
+  <p>I wake up at <time>5:30am</time> and sleep at <time>12:00am</time> every weekday.</p>
+  <p>I have an appointment on <time appointmentTime="2008-02-14 20:00">Valentines day</time>.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Sum</td>
+        <td>$180</td>
+      </tr>
+    </tfoot>
+  </table>
+  </br></br>
+  <nav>
+    <a href="#p1"> Paragraph 1&ensp;&ensp;</a>
+    <a href="#p2"> Paragraph 2&ensp;&ensp;</a>
+    <a href="#p3"> Paragraph 3&ensp;&ensp;</a>
+    <a href="#p4"> Paragraph 4&ensp;&ensp;</a>
+    <a href="#p5"> Paragraph 5&ensp;&ensp;</a>
+  </nav>
+  <main>
+    <p id="p1">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p></br>
+    <p id="p2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p></br>
+    <p id="p3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p></br>
+    <p id="p4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p></br>
+    <p id="p5">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </main>
+  <script>
+    window.addEventListener('load', setCurr);
+    //document.addEventListener('DOMContentLoaded', setCurr);
+    window.addEventListener('hashchange', setCurr);
+
+
+    function setCurr(ev) {
+      let p, a, id;
+      p = document.querySelector(':target');
+      console.log(ev.type, p);
+      if (p) {
+        id = `a[href="#${p.id}"]`;
+        console.log(id)
+      }
+    }
+
+  </script>
+</body>
+
+</html>

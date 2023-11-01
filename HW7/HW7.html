@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="HW7.css">
+
+</head>
+<body>
+
+<h2>Accordion Example</h2>
+
+<button class="accordion">Anthem 1</button>
+<div class="panel">
+  <p>O say can you see by the dawn's early light
+    What so proudly we hailed at the twilight's last gleaming
+    Whose broad stripes and bright stars through the perilous fight
+    O'er the ramparts we watched, were so gallantly streaming?</p>
+</div>
+
+<button class="accordion">Anthem 2</button>
+<div class="panel">
+  <p>And the rocket's red glare, the bombs bursting in air
+    Gave proof through the night that our flag was still there
+    O say does that star-spangled banner yet wave
+    O'er the land of the free and the home of the brave</p>
+</div>
+
+<button class="accordion">Defenestration FORMAL•HUMOROUS</button>
+<div class="panel">
+  <p>the action of throwing someone out of a window.
+    "death by defenestration has a venerable history"
+    </p>
+</div>
+
+<h2>Horizontal Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'PistachiosNuts')">Pistachios nuts</button>
+  <button class="tablinks" onclick="openCity(event, 'Hazelnuts')">Hazelnuts</button>
+  <button class="tablinks" onclick="openCity(event, 'Cashews')">Cashews</button>
+</div>
+
+<div id="PistachiosNuts" class="tabcontent">
+  <h3>Pistachios nuts</h3>
+  <p>Originating in parts of Western Asia and the Middle East, the pistachio (technically a seed) has proven its appeal as a key ingredient in dishes such as baklava, ma'amoul, haroseth, and halvah.</p>
+</div>
+
+<div id="Hazelnuts" class="tabcontent">
+  <h3>Hazelnuts</h3>
+  <p>This round nut plays a big role in a beloved sweet spread gianduja, better known as the commercially available Nutella.</p> 
+</div>
+
+<div id="Cashews" class="tabcontent">
+  <h3>Cashews</h3>
+  <p>This crescent-shaped South American nut made its way into other cuisines such as Indian and Thai, thanks to Portuguese explorers and traders. </p>
+</div>
+
+<h2>Vertical Tabs</h2>
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab2">
+  <button class="tablinks2" onclick="openCity2(event, 'Walnuts')" id="defaultOpen">Walnuts</button>
+  <button class="tablinks2" onclick="openCity2(event, 'MarconaAlmonds')">Marcona Almonds</button>
+  <button class="tablinks2" onclick="openCity2(event, 'MacadamiaNuts')">Macadamia Nuts</button>
+</div>
+
+<div id="Walnuts" class="tabcontent2">
+  <h3>Walnuts</h3>
+  <p>The walnut is an extremely popular baking ingredient, and one of the few nuts you can still find in the shell (depending on the season). </p>
+</div>
+
+<div id="MarconaAlmonds" class="tabcontent2">
+  <h3>Marcona Almonds</h3>
+  <p>Rounder, flatter, and sweeter than regular almonds, Marcona almonds are from Spain. </p> 
+</div>
+
+<div id="MacadamiaNuts" class="tabcontent2">
+  <h3>Macadamia Nuts</h3>
+  <p>Originally available only in Hawaii or Australia, these large and now ubiquitous nuts are palpably rich with an almost buttery flavor. </p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+function openCity(evt, nuts) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(nuts).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openCity2(evt, nuts) {
+  var i, tabcontent, tablinks2;
+  tabcontent = document.getElementsByClassName("tabcontent2");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+  document.getElementById(nuts).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
